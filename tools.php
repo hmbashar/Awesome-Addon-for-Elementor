@@ -38,7 +38,7 @@ add_action( 'plugins_loaded', 'aefe_plugin_general_init' );
  * Enqueue scripts and styles.
  */
 function aefe_stylesheet_enque() {    
-    wp_enqueue_style( 'aefe_stylesheet',  $AEFE_URL . "/css/style.css");
+    wp_enqueue_style( 'aefe_stylesheet',  AEFE_URL . "/assets/css/style.css");
 }
 add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
 

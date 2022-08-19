@@ -125,8 +125,31 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-	}
+		?>
 
+		<!--Single Price-->
+		<div class="single-pricing-table floatleft">
+			<div class="single-pricing-table-header">
+				<h2>STARTER</h2>
+			</div>
+			<div class="single-pricing-price">
+				<h2><sup>$</sup>10<span>/m</span></h2>
+			</div>
+			<div class="single-pricing-content">
+				<p>A simple option but</p>
+				<p>powerful to manage</p>
+				<p>your business</p>
+				<p>Email support</p>
+			</div>
+			<div class="single-pricing-buy">
+				<a href="">Buy  Now</a>
+			</div>
+		</div><!--/ Single Price-->
+
+<?php
+
+
+	}
 
 
 }
