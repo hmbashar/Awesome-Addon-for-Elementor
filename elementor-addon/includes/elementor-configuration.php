@@ -1,6 +1,6 @@
 <?php 
 
-namespace DFAAE_ELEMENTOR;
+namespace AEFE_ELEMENTOR;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -131,9 +131,9 @@ final class Plugin {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'DFAAE' ),
-			'<strong>' . esc_html__( 'Awesome Addon For Elementor', 'DFAAE' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'DFAAE' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'aefe' ),
+			'<strong>' . esc_html__( 'Awesome Elements For Elementor', 'aefe' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'aefe' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -154,9 +154,9 @@ final class Plugin {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'DFAAE' ),
-			'<strong>' . esc_html__( 'Awesome Addon For Elementor', 'DFAAE' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'DFAAE' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aefe' ),
+			'<strong>' . esc_html__( 'Awesome Elements For Elementor', 'aefe' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'aefe' ) . '</strong>',
 			 self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -178,9 +178,9 @@ final class Plugin {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'DFAAE' ),
-			'<strong>' . esc_html__( 'Awesome Addon For Elementor', 'DFAAE' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'DFAAE' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'aefe' ),
+			'<strong>' . esc_html__( 'Awesome Elements For Elementor', 'aefe' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'aefe' ) . '</strong>',
 			 self::MINIMUM_PHP_VERSION
 		);
 
@@ -216,10 +216,10 @@ final class Plugin {
 	 */
 	public function register_widgets( $widgets_manager ) {
 
-		require_once( DFAAE_PATH . '/elementor-addon/includes/widgets/widget-1.php' );
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/widget-1.php' );
 		
 
-		$widgets_manager->register( new \DFAAE_ELEMENTOR\DFAAE_Pricing_Table() );
+		$widgets_manager->register( new \AEFE_ELEMENTOR\aefe_Pricing_Table() );
 		
 
 	}

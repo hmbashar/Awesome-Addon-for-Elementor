@@ -1,5 +1,5 @@
 <?php
-namespace DFAAE_ELEMENTOR;
+namespace AEFE_ELEMENTOR;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class DFAAE_Pricing_Table extends \Elementor\Widget_Base {
+class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -24,7 +24,7 @@ class DFAAE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'dfaae-pricing-table';
+		return 'aefe-pricing-table';
 	}
 
 	/**
@@ -37,7 +37,7 @@ class DFAAE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'AW Pricing Table', 'DFAAE' );
+		return esc_html__( 'AW Pricing Table', 'aefe' );
 	}
 
 	/**
@@ -76,7 +76,7 @@ class DFAAE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return array Widget categories.
 	 */
 	public function get_categories() {
-		return [ 'dfaae-category' ];
+		return [ 'aefe-category' ];
 	}
 
 	/**
