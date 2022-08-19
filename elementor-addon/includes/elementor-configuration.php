@@ -216,10 +216,10 @@ final class Plugin {
 	 */
 	public function register_widgets( $widgets_manager ) {
 
-		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/widget-1.php' );
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/pricing-table.php' ); // add pricing table file
 		
 
-		$widgets_manager->register( new \AEFE_ELEMENTOR\aefe_Pricing_Table() );
+		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFE_Pricing_Table() ); // call pricing table class
 		
 
 	}
