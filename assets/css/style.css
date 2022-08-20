@@ -20,6 +20,6 @@
 .single-pricing-content {text-align: center;padding-left: 15px;padding-right: 15px;margin-top: 40px;}
 .single-pricing-content p {color: #666666;font-size: 16px;font-family: roboto;font-weight: 500;/*! line-height: 30px; */margin-bottom: 30px;}
 .single-pricing-buy {text-align: center;margin-bottom: 40px;margin-top: 45px;}
-.single-pricing-buy a{background-color: #666;color: #fff;display: inline-block;padding: 15px 50px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;transition: 1s;}
+.single-pricing-buy a{background-color: #666;color: #fff !important;display: inline-block;padding: 15px 50px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;transition: 1s;}
 .single-pricing-table:hover .single-pricing-buy a{transition:1s;background-color:#41207b;box-shadow: 0px 6px 20px -12px #41207b;color:#fff;}
 .single-pricing-table:hover {box-shadow: 0px 7px 25px -13px #666;}

@@ -132,17 +132,31 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 			]
 		);
 		
+		// Package Price Currency
+		$this->add_control(
+			'package_price_currency',
+			[
+				'label' => esc_html__( 'Currency', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '$', 'AEFE' ),
+				'placeholder' => esc_html__( 'Currency', 'AEFE' ),
+				'label_block' => true,
+			]
+		);	
+		
 		// Package Price
 		$this->add_control(
 			'package_price',
 			[
 				'label' => esc_html__( 'Price', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '$10', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'default' => esc_html__( '10', 'AEFE' ),
 				'placeholder' => esc_html__( 'Price', 'AEFE' ),
+				'label_block' => true,
 			]
 		);
 		
+				
 		// Package Duration
 		$this->add_control(
 			'package_duration',
@@ -151,6 +165,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__( '/m', 'AEFE' ),
 				'placeholder' => esc_html__( 'Duration', 'AEFE' ),
+				'label_block' => true,
 			]
 		);
 
@@ -165,7 +180,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 			]
 		);
 		
-		// Package Price
+		// Package Feature list
 		$this->add_control(
 			'package_content',
 			[
@@ -205,9 +220,8 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Button URL', 'AEFE' ),
 				'type' => \Elementor\Controls_Manager::URL,
-				'placeholder' => esc_html__( 'https://your-link.com', 'AEFE' ),
-				//'options' => [ 'url', 'is_external', 'nofollow' ],				
-				'label_block' => true,
+				'placeholder' => esc_html__( 'https://your-link.com', 'AEFE' ),					
+				'label_block' => true,				
 			]
 		);
 		
@@ -226,24 +240,24 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
+		if ( ! empty( $settings['pacakge_button_url']['url'] ) ) {
+			$this->add_link_attributes( 'pacakge_button_url', $settings['pacakge_button_url'] );
+		}
 		?>
 
 		<!--Single Price-->
 		<div class="single-pricing-table floatleft">
 			<div class="single-pricing-table-header">
-				<h2>STARTER</h2>
+				<h2><?php echo esc_html($settings['package_name']);?></h2>
 			</div>
 			<div class="single-pricing-price">
-				<h2><sup>$</sup>10<span>/m</span></h2>
+				<h2><sup><?php echo esc_html($settings['package_price_currency']);?></sup><?php echo esc_html($settings['package_price']);?><span><?php echo esc_html($settings['package_duration']);?></span></h2>
 			</div>
 			<div class="single-pricing-content">
-				<p>A simple option but</p>
-				<p>powerful to manage</p>
-				<p>your business</p>
-				<p>Email support</p>
+				<?php echo wp_kses($settings['package_content'],  wp_kses_allowed_html('post'));?>
 			</div>
 			<div class="single-pricing-buy">
-				<a href="">Buy  Now</a>
+				<a <?php echo $this->get_render_attribute_string( 'pacakge_button_url' ); ?>><?php echo esc_html($settings['pacakge_button_text']);?></a>
 			</div>
 		</div><!--/ Single Price-->
 
