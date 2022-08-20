@@ -102,14 +102,115 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	 */
 	protected function register_controls() {
 
+		// Header Section
 		$this->start_controls_section(
-			'content_section',
+			'header_content_section',
 			[
-				'label' => esc_html__( 'List Content', 'elementor-list-widget' ),
+				'label' => esc_html__( 'Header', 'AEFE' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
+		
+		// Package Name
+		$this->add_control(
+			'package_name',
+			[
+				'label' => esc_html__( 'Pacakge Name', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Starter', 'AEFE' ),
+				'placeholder' => esc_html__( 'Pacakge Name', 'AEFE' ),
+			]
+		);
+		$this->end_controls_section();
 
+		// Price Section
+		$this->start_controls_section(
+			'pacakge_price_section',
+			[
+				'label' => esc_html__( 'Price', 'AEFE' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+		
+		// Package Price
+		$this->add_control(
+			'package_price',
+			[
+				'label' => esc_html__( 'Price', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '$10', 'AEFE' ),
+				'placeholder' => esc_html__( 'Price', 'AEFE' ),
+			]
+		);
+		
+		// Package Duration
+		$this->add_control(
+			'package_duration',
+			[
+				'label' => esc_html__( 'Duration', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '/m', 'AEFE' ),
+				'placeholder' => esc_html__( 'Duration', 'AEFE' ),
+			]
+		);
+
+		$this->end_controls_section();
+
+		// Package Content Section
+		$this->start_controls_section(
+			'pacakge_content_section',
+			[
+				'label' => esc_html__( 'Content', 'AEFE' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+		
+		// Package Price
+		$this->add_control(
+			'package_content',
+			[
+				'label' => esc_html__( 'Feature List', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::WYSIWYG,	
+				'placeholder' => esc_html__( 'Pacakge Feature', 'AEFE' ),		
+				
+			]
+		);
+		
+		$this->end_controls_section();
+
+		// Package Footer Section
+		$this->start_controls_section(
+			'pacakge_footer_section',
+			[
+				'label' => esc_html__( 'Footer', 'AEFE' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+		
+		// Package Button Text
+		$this->add_control(
+			'pacakge_button_text',
+			[
+				'label' => esc_html__( 'Button Text', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Buy Now', 'AEFE' ),								
+				'label_block' => true,
+				'default'		=> esc_html('Buy Now', 'AEFE'),
+			]
+		);
+		
+		// Package Button URL
+		$this->add_control(
+			'pacakge_button_url',
+			[
+				'label' => esc_html__( 'Button URL', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'placeholder' => esc_html__( 'https://your-link.com', 'AEFE' ),
+				//'options' => [ 'url', 'is_external', 'nofollow' ],				
+				'label_block' => true,
+			]
+		);
+		
 		$this->end_controls_section();
 
 	}
