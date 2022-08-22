@@ -248,6 +248,17 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 		
 		$this->end_controls_section();
 
+		// Package Price Style
+		$this->start_controls_section(
+			'package_price_section_style',
+			[
+				'label'		=> esc_html__( 'Package Price Style', 'AEFE' ),
+				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->end_controls_section();
+
 	}
 
 	/**
