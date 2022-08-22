@@ -101,7 +101,28 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
 	protected function register_controls() {
+		//Template
+		$this->start_controls_section(
+			'aefe-pt-template-style',
+			[
+				'label' => esc_html__( 'Style', 'aefe' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
 
+		$this->add_control(
+			'aefe-pt-style',
+			[
+				'label' => esc_html__( 'Style', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'style-one',
+				'options' => [
+					'style-one'  => esc_html__( 'Style One', 'aefe' ),
+					'style-two' => esc_html__( 'Style Two', 'aefe' ),
+				],
+			]
+		);
+		$this->end_controls_section(); // End the template style option
 		// Header Section
 		$this->start_controls_section(
 			'header_content_section',
@@ -243,23 +264,37 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 		if ( ! empty( $settings['pacakge_button_url']['url'] ) ) {
 			$this->add_link_attributes( 'pacakge_button_url', $settings['pacakge_button_url'] );
 		}
+
+
+		//Check Template Style and add extra class for style two
+		if(!empty($settings['aefe-pt-style']) && $settings['aefe-pt-style'] == 'style-two') {
+			$pricing_table_style = 'aefe-pt-style-two';
+			$pricing_table_buton_style = 'aefe-pt-st-two-b';
+		}else {
+			$pricing_table_style = NULL;
+			$pricing_table_buton_style = NULL;
+		}
+		
+
 		?>
 
 		<!--Single Price-->
-		<div class="single-pricing-table floatleft">
-			<div class="single-pricing-table-header">
+		<div class="<?php echo esc_attr($pricing_table_style); ?> aefe-pt-single-pricing-table">
+			<div class="aefe-pt-single-pricing-table-header">
 				<h2><?php echo esc_html($settings['package_name']);?></h2>
 			</div>
-			<div class="single-pricing-price">
+			<div class="aefe-pt-single-pricing-price">
 				<h2><sup><?php echo esc_html($settings['package_price_currency']);?></sup><?php echo esc_html($settings['package_price']);?><span><?php echo esc_html($settings['package_duration']);?></span></h2>
 			</div>
-			<div class="single-pricing-content">
+			<div class="aefe-pt-single-pricing-content">
 				<?php echo wp_kses($settings['package_content'],  wp_kses_allowed_html('post'));?>
 			</div>
-			<div class="single-pricing-buy">
+			<div class="<?php echo esc_attr($pricing_table_buton_style); ?> aefe-pt-single-pricing-buy">
 				<a <?php echo $this->get_render_attribute_string( 'pacakge_button_url' ); ?>><?php echo esc_html($settings['pacakge_button_text']);?></a>
 			</div>
 		</div><!--/ Single Price-->
+
+
 
 <?php
 

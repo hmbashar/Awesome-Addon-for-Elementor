@@ -38,7 +38,10 @@ add_action( 'plugins_loaded', 'aefe_plugin_general_init' );
  * Enqueue scripts and styles.
  */
 function aefe_stylesheet_enque() {    
-    wp_enqueue_style( 'aefe_stylesheet',  AEFE_URL . "/assets/css/style.css");
+	//Awesome Elements plugin main stylesheet
+    wp_enqueue_style( 'aefe_main_stylesheet',  AEFE_URL . "/assets/css/style.css");
+	//Awesome Elements Plugin Responsive Stylesheet
+    wp_enqueue_style( 'aefe_responsive_stylesheet',  AEFE_URL . "/assets/css/responsive.css", array('aefe_main_stylesheet'));
 }
 add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
 

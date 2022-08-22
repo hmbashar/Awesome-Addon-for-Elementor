@@ -1,0 +1,33 @@
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {   
+    
+ .aefe-pt-single-pricing-table-header {
+    background-size: 100% 95%;
+  }
+ .aefe-pt-single-pricing-buy {
+    padding-bottom: 25px;
+  }
+
+
+}
+
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    .aefe-pt-single-pricing-table-header {
+        background-size: 100% 95%;
+      }
+     .aefe-pt-single-pricing-buy {
+        padding-bottom: 25px;
+      }
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+}
