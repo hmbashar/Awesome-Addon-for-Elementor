@@ -1,5 +1,5 @@
 === Awesome Elements For Elementor ===
-Contributors: hmbashar
+Contributors: hmbashar, mdnesarmridha
 Tags: elementor, elementor popular widget, cretive elementor widget, elementor addon, awesome design, wordpress plugin
 Requires at least: 4.7
 Tested up to: 6.0.1
