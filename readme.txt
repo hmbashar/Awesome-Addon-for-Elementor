@@ -18,6 +18,7 @@ Awesome Elements For Elementor is an ultimate All in one addons for Elementor Pa
 **KEY FEATURES**
 
 * Pricing Table
+* Team Member
 * More Coming soon
 
 == Frequently Asked Questions ==
