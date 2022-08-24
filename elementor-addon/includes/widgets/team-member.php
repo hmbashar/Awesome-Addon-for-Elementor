@@ -218,6 +218,71 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 
 		$this->end_controls_section();
 
+        /*---------------------------------------------------------------
+        Repeater Control
+        -----------------------------------------------------------------*/
+        $this->start_controls_section(
+			'content_section',
+			[
+				'label' => esc_html__( 'Content', 'plugin-name' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$repeater = new \Elementor\Repeater();
+
+		$repeater->add_control(
+			'list_title', [
+				'label' => esc_html__( 'Title', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'List Title' , 'plugin-name' ),
+				'label_block' => true,
+			]
+		);
+
+		$repeater->add_control(
+			'list_content', [
+				'label' => esc_html__( 'Content', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::WYSIWYG,
+				'default' => esc_html__( 'List Content' , 'plugin-name' ),
+				'show_label' => false,
+			]
+		);
+
+		$repeater->add_control(
+			'list_color',
+			[
+				'label' => esc_html__( 'Color', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}'
+				],
+			]
+		);
+
+		$this->add_control(
+			'list',
+			[
+				'label' => esc_html__( 'Repeater List', 'plugin-name' ),
+				'type' => \Elementor\Controls_Manager::REPEATER,
+				'fields' => $repeater->get_controls(),
+				'default' => [
+					[
+						'list_title' => esc_html__( 'Title #1', 'plugin-name' ),
+						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'plugin-name' ),
+					],
+					[
+						'list_title' => esc_html__( 'Title #2', 'plugin-name' ),
+						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'plugin-name' ),
+					],
+				],
+				'title_field' => '{{{ list_title }}}',
+			]
+		);
+
+		$this->end_controls_section();
+
+
 
 	}
 
