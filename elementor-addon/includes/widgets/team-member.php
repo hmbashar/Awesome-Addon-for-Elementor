@@ -50,7 +50,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-bullet-list';
+		return 'eicon-person';
 	}
 
 	/**
@@ -89,7 +89,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'list', 'lists', 'ordered', 'unordered' ];
+		return [ 'team member', 'Talent', 'Team', 'person' ];
 	}
 
 	/**
@@ -103,25 +103,121 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	protected function register_controls() {
 		//Single Or Repeater
 		$this->start_controls_section(
-			'aefe-tm-single-or-repeater',
+			'aefe-tm-single-or-repeater-tab',
 			[
 				'label' => esc_html__( 'Type', 'aefe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 		$this->add_control(
-			'aefe-tm-repeater',
+			'aefe-tm-repeater-single',
 			[
 				'label' => esc_html__( 'Type', 'aefe' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'single',
 				'options' => [
 					'single'  => esc_html__( 'Single', 'aefe' ),
-					'repeater' => esc_html__( 'Repeater', 'aefe' ),
+					'slider' => esc_html__( 'Slider', 'aefe' ),
 				],
 			]
 		);
 		$this->end_controls_section(); // End the Single Or Repeater Option
+
+        // Information Section
+		$this->start_controls_section(
+			'tm_content_section',
+			[
+				'label' => esc_html__( 'Content', 'AEFE' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'aefe-tm-repeater-single' => 'single',
+                ],
+			]
+		);
+		
+		// Person Name
+		$this->add_control(
+			'aefe-tm-name',
+			[
+				'label' => esc_html__( 'Name', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,				
+				'placeholder' => esc_html__( 'Member Name', 'AEFE' ),
+			]
+		);
+		
+		// Person subtitle
+		$this->add_control(
+			'aefe-tm-subtitle',
+			[
+				'label' => esc_html__( 'Sub Title', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,				
+				'placeholder' => esc_html__( 'Subtitle', 'AEFE' ),
+			]
+		);
+
+        // Person Picture
+        $this->add_control(
+			'aefe-tm-member-picture',
+			[
+				'label' => esc_html__( 'Member Picture', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+			]
+		);
+
+        // Person Picture
+        $this->add_control(
+			'aefe-tm-member-pic-dimension',
+			[
+				'label' => esc_html__( 'Image Dimension', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
+				'description' => esc_html__( 'Crop the original image size to 211x211px size.', 'aefe' ),
+				'default' => [
+					'width' => '',
+					'height' => '',
+				],
+			]
+		);
+		$this->end_controls_section();
+
+        // Social Profile Section
+		$this->start_controls_section(
+			'tm_social_section',
+			[
+				'label' => esc_html__( 'Social Profile', 'AEFE' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'condition' => [
+                    'aefe-tm-repeater-single' => 'single',
+                ],
+			]
+		);
+		
+		// facebook url 
+		$this->add_control(
+			'aefe-tm-facebook',
+			[
+				'label' => esc_html__( 'Facebook URL', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::URL,				
+				'placeholder' => esc_html__( 'https://fb.com/hmbashar', 'AEFE' ),
+                'label_block' => true,
+			]
+		);
+		
+		// Twitter URL subtitle
+		$this->add_control(
+			'aefe-tm-twitter',
+			[
+				'label' => esc_html__( 'Twitter URL', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::URL,				
+				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', 'AEFE' ),
+                'label_block' => true,
+			]
+		);
+
+		$this->end_controls_section();
+
 
 	}
 
@@ -139,7 +235,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		?>
 
 	       <!-- Our Talent Team Area-->
-           <section class="our-talent-team-area fix" id="out_team">
+           <section class="our-talent-team-area fix">
            <div class="our-talent-team column section-margin">
                <!--Our Talent Team Bottom/Content-->
                <div class="ourtalent-team-bottom">

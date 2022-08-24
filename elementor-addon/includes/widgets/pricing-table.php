@@ -89,7 +89,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'list', 'lists', 'ordered', 'unordered' ];
+		return [ 'table', 'pricing', 'pricing table', 'package' ];
 	}
 
 	/**
