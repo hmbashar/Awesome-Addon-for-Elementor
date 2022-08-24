@@ -101,163 +101,27 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
 	protected function register_controls() {
-		//Template
+		//Single Or Repeater
 		$this->start_controls_section(
-			'aefe-pt-template-style',
+			'aefe-tm-single-or-repeater',
 			[
-				'label' => esc_html__( 'Style', 'aefe' ),
+				'label' => esc_html__( 'Type', 'aefe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
-
 		$this->add_control(
-			'aefe-pt-style',
+			'aefe-tm-repeater',
 			[
-				'label' => esc_html__( 'Style', 'aefe' ),
+				'label' => esc_html__( 'Type', 'aefe' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'style-one',
+				'default' => 'single',
 				'options' => [
-					'style-one'  => esc_html__( 'Style One', 'aefe' ),
-					'style-two' => esc_html__( 'Style Two', 'aefe' ),
+					'single'  => esc_html__( 'Single', 'aefe' ),
+					'repeater' => esc_html__( 'Repeater', 'aefe' ),
 				],
 			]
 		);
-		$this->end_controls_section(); // End the template style option
-		// Header Section
-		$this->start_controls_section(
-			'header_content_section',
-			[
-				'label' => esc_html__( 'Header', 'AEFE' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-		
-		// Package Name
-		$this->add_control(
-			'package_name',
-			[
-				'label' => esc_html__( 'Pacakge Name', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Starter', 'AEFE' ),
-				'placeholder' => esc_html__( 'Pacakge Name', 'AEFE' ),
-			]
-		);
-		$this->end_controls_section();
-
-		// Price Section
-		$this->start_controls_section(
-			'pacakge_price_section',
-			[
-				'label' => esc_html__( 'Price', 'AEFE' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-		
-		// Package Price Currency
-		$this->add_control(
-			'package_price_currency',
-			[
-				'label' => esc_html__( 'Currency', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '$', 'AEFE' ),
-				'placeholder' => esc_html__( 'Currency', 'AEFE' ),
-				'label_block' => true,
-			]
-		);	
-		
-		// Package Price
-		$this->add_control(
-			'package_price',
-			[
-				'label' => esc_html__( 'Price', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'default' => esc_html__( '10', 'AEFE' ),
-				'placeholder' => esc_html__( 'Price', 'AEFE' ),
-				'label_block' => true,
-			]
-		);
-		
-				
-		// Package Duration
-		$this->add_control(
-			'package_duration',
-			[
-				'label' => esc_html__( 'Duration', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '/m', 'AEFE' ),
-				'placeholder' => esc_html__( 'Duration', 'AEFE' ),
-				'label_block' => true,
-			]
-		);
-
-		$this->end_controls_section();
-
-		// Package Content Section
-		$this->start_controls_section(
-			'pacakge_content_section',
-			[
-				'label' => esc_html__( 'Content', 'AEFE' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-		
-		// Package Feature list
-		$this->add_control(
-			'package_content',
-			[
-				'label' => esc_html__( 'Feature List', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::WYSIWYG,	
-				'placeholder' => esc_html__( 'Pacakge Feature', 'AEFE' ),		
-				
-			]
-		);
-		
-		$this->end_controls_section();
-
-		// Package Footer Section
-		$this->start_controls_section(
-			'pacakge_footer_section',
-			[
-				'label' => esc_html__( 'Footer', 'AEFE' ),
-				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-			]
-		);
-		
-		// Package Button Text
-		$this->add_control(
-			'pacakge_button_text',
-			[
-				'label' => esc_html__( 'Button Text', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'placeholder' => esc_html__( 'Buy Now', 'AEFE' ),								
-				'label_block' => true,
-				'default'		=> esc_html('Buy Now', 'AEFE'),
-			]
-		);
-		
-		// Package Button URL
-		$this->add_control(
-			'pacakge_button_url',
-			[
-				'label' => esc_html__( 'Button URL', 'AEFE' ),
-				'type' => \Elementor\Controls_Manager::URL,
-				'placeholder' => esc_html__( 'https://your-link.com', 'AEFE' ),					
-				'label_block' => true,				
-			]
-		);
-		
-		$this->end_controls_section();
-
-		// Package Price Style
-		$this->start_controls_section(
-			'package_price_section_style',
-			[
-				'label'		=> esc_html__( 'Package Price Style', 'AEFE' ),
-				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->end_controls_section();
+		$this->end_controls_section(); // End the Single Or Repeater Option
 
 	}
 
@@ -277,128 +141,119 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	       <!-- Our Talent Team Area-->
            <section class="our-talent-team-area fix" id="out_team">
            <div class="our-talent-team column section-margin">
-           		<!--Our Talent Top/Heading -->
-               <div class="ourtalent-team-top fix">
-                   <div class="our-talent-heading fix">
-                       <div class="section-title section-title-with-desc">
-                           <h2>Our Talent Team</h2>
-                           <p>Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem ipsum madolor sit amet, consectetur adipisicing incididunt.</p>
-                       </div>
-                   </div>
-               </div><!--/ Our Talent Top/Heading -->
                <!--Our Talent Team Bottom/Content-->
                <div class="ourtalent-team-bottom">
                     <div class="our-talent-slider-content owl-carousel">
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">HASI KHUSI</a></h2>
                                 <h3>Advisor of Team</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-1.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-1.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">AHMED AMIR</a></h2>
                                 <h3>Head of Office</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-2.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-2.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">RANIA ASKHAR</a></h2>
                                 <h3>UI/UX Designer</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-3.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-3.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">CHIRO KUMAR</a></h2>
                                 <h3>Developer</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">HASI KHUSI</a></h2>
                                 <h3>Advisor of Team</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-1.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-1.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">AHMED AMIR</a></h2>
                                 <h3>Head of Office</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-2.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-2.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">RANIA ASKHAR</a></h2>
                                 <h3>UI/UX Designer</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                         <!--Single Team Member-->
                         <div class="single-team-member">
                             <div class="single-team-member-picture">
-                                <a href=""><img src="img/single-team-member-3.png" alt=""></a>
+                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-3.png" alt=""></a>
                             </div>
                             <div class="single-team-member-name">
                                 <h2><a href="">CHIRO KUMAR</a></h2>
                                 <h3>Developer</h3>
                             </div>
                             <div class="single-team-member-social">
-                                <a href=""><i class="fa fa-facebook"></i></a>
-                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
                             </div>
                         </div><!--/ Single Team Member-->
                     </div>

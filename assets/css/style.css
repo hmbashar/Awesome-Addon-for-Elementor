@@ -97,7 +97,7 @@
 .single-team-member-social {margin-top:30px;text-align: center;}
 .single-team-member-social a {margin-right: 20px;}
 .single-team-member-social a:last-child{margin-right:0;}
-.single-team-member-social a i {color: #cccccc;
+.single-team-member-social a i, .single-team-member-social a i svg {color: #cccccc;
 font-size: 18px;
 height: 40px;
 width: 40px;
@@ -108,7 +108,7 @@ padding-top: 10px;}
 .single-team-member:hover {box-shadow: 0px 7px 26px -16px #666;}
 .single-team-member:hover .single-team-member-name h2 a{color:#4b278f;transition:1s;}
 .single-team-member:hover .single-team-member-name h3{color:#4b278f;transition:1s;}
-.single-team-member:hover .single-team-member-social a i {color: #4b278f;border: 1px solid #4b278f;transition:1s;}
+.single-team-member:hover .single-team-member-social a i,.single-team-member:hover  .single-team-member-social a i svg {color: #4b278f;border: 1px solid #4b278f;transition:1s;}
 
 .our-talent-slider-content .owl-nav{position: absolute;top: 200px;left: -15%;margin: 0 auto;right: -15%;}
 .our-talent-slider-content .owl-nav .owl-prev{float: left;}

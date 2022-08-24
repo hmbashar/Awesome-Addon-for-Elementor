@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 //define URL
 define('AEFE_URL', plugin_dir_url( __FILE__ ));
 define('AEFE_PATH', plugin_dir_path(__FILE__));
+define('AEFE_URI', plugin_dir_url( dirname( __FILE__ ) ));
 
 
 
