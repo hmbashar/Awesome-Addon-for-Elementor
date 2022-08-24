@@ -201,7 +201,7 @@ final class Plugin {
 	public function init() {
 
 		add_action( 'elementor/widgets/register', [ $this, 'register_widgets' ] );
-		//add_action( 'elementor/controls/register', [ $this, 'register_controls' ] );
+		
 
 	}
 
@@ -217,30 +217,15 @@ final class Plugin {
 	public function register_widgets( $widgets_manager ) {
 
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/pricing-table.php' ); // add pricing table file
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/team-member.php' ); // Team Member file
 		
 
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFE_Pricing_Table() ); // call pricing table class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFE_TeamMember() ); // Team Member class
 		
 
 	}
 
-	/**
-	 * Register Controls
-	 *
-	 * Load controls files and register new Elementor controls.
-	 *
-	 * Fired by `elementor/controls/register` action hook.
-	 *
-	 * @param \Elementor\Controls_Manager $controls_manager Elementor controls manager.
-	 */
-	public function register_controls( $controls_manager ) {
-
-		require_once( __DIR__ . '/includes/controls/control-1.php' );
-		require_once( __DIR__ . '/includes/controls/control-2.php' );
-
-		$controls_manager->register( new Control_1() );
-		$controls_manager->register( new Control_2() );
-
-	}
+	
 
 }
