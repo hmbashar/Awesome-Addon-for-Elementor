@@ -24,7 +24,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'aefe-pricing-table';
+		return 'aefe-team-member';
 	}
 
 	/**
@@ -37,7 +37,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'AW Pricing Table', 'aefe' );
+		return esc_html__( 'AW Team Member', 'aefe' );
 	}
 
 	/**
@@ -272,38 +272,139 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		if ( ! empty( $settings['pacakge_button_url']['url'] ) ) {
-			$this->add_link_attributes( 'pacakge_button_url', $settings['pacakge_button_url'] );
-		}
-
-
-		//Check Template Style and add extra class for style two
-		if(!empty($settings['aefe-pt-style']) && $settings['aefe-pt-style'] == 'style-two') {
-			$pricing_table_style = 'aefe-pt-style-two';
-			$pricing_table_buton_style = 'aefe-pt-st-two-b';
-		}else {
-			$pricing_table_style = NULL;
-			$pricing_table_buton_style = NULL;
-		}
-		
-
 		?>
 
-		<!--Single Price-->
-		<div class="<?php echo esc_attr($pricing_table_style); ?> aefe-pt-single-pricing-table">
-			<div class="aefe-pt-single-pricing-table-header">
-				<h2><?php echo esc_html($settings['package_name']);?></h2>
-			</div>
-			<div class="aefe-pt-single-pricing-price">
-				<h2><sup><?php echo esc_html($settings['package_price_currency']);?></sup><?php echo esc_html($settings['package_price']);?><span><?php echo esc_html($settings['package_duration']);?></span></h2>
-			</div>
-			<div class="aefe-pt-single-pricing-content">
-				<?php echo wp_kses($settings['package_content'],  wp_kses_allowed_html('post'));?>
-			</div>
-			<div class="<?php echo esc_attr($pricing_table_buton_style); ?> aefe-pt-single-pricing-buy">
-				<a <?php echo $this->get_render_attribute_string( 'pacakge_button_url' ); ?>><?php echo esc_html($settings['pacakge_button_text']);?></a>
-			</div>
-		</div><!--/ Single Price-->
+	       <!-- Our Talent Team Area-->
+           <section class="our-talent-team-area fix" id="out_team">
+           <div class="our-talent-team column section-margin">
+           		<!--Our Talent Top/Heading -->
+               <div class="ourtalent-team-top fix">
+                   <div class="our-talent-heading fix">
+                       <div class="section-title section-title-with-desc">
+                           <h2>Our Talent Team</h2>
+                           <p>Lorem ipsum madolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor coli incididunt ut labore Lorem ipsum madolor sit amet, consectetur adipisicing incididunt.</p>
+                       </div>
+                   </div>
+               </div><!--/ Our Talent Top/Heading -->
+               <!--Our Talent Team Bottom/Content-->
+               <div class="ourtalent-team-bottom">
+                    <div class="our-talent-slider-content owl-carousel">
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">HASI KHUSI</a></h2>
+                                <h3>Advisor of Team</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-1.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">AHMED AMIR</a></h2>
+                                <h3>Head of Office</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-2.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">RANIA ASKHAR</a></h2>
+                                <h3>UI/UX Designer</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-3.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">CHIRO KUMAR</a></h2>
+                                <h3>Developer</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">HASI KHUSI</a></h2>
+                                <h3>Advisor of Team</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-1.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">AHMED AMIR</a></h2>
+                                <h3>Head of Office</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-2.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">RANIA ASKHAR</a></h2>
+                                <h3>UI/UX Designer</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                        <!--Single Team Member-->
+                        <div class="single-team-member">
+                            <div class="single-team-member-picture">
+                                <a href=""><img src="img/single-team-member-3.png" alt=""></a>
+                            </div>
+                            <div class="single-team-member-name">
+                                <h2><a href="">CHIRO KUMAR</a></h2>
+                                <h3>Developer</h3>
+                            </div>
+                            <div class="single-team-member-social">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div><!--/ Single Team Member-->
+                    </div>
+               </div><!--/ Our Talent Team Bottom/Content-->
+           </div>
+       </section><!--/ Our Talent Team Area-->
 
 
 

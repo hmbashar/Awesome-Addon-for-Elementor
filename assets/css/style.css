@@ -50,3 +50,73 @@
  .aefe-pt-style-two .aefe-pt-single-pricing-buy a{background-color: #cccccc;color: #fff;display: inline-block;padding: 15px 50px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;transition: 1s;}
 .aefe-pt-style-two.aefe-pt-single-pricing-table:hover .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a{transition:1s;box-shadow: 0px 6px 16px -8px #03bee4;background-color:#03bee4 !important; color:#fff;}
 .aefe-pt-style-two .aefe-pt-single-pricing-table:hover {box-shadow: 0px 14px 40px -25px #666;}
+
+
+/*---------------------------------------
+    5 Our Talent Area
+-----------------------------------------*/
+.our-talent-team-area {
+}
+
+.our-talent-team {
+  position: relative;
+}
+
+.ourtalent-team-top {
+}
+
+.our-talent-heading {
+}
+
+.ourtalent-team-bottom {
+}
+
+.our-talent-slider-content {}
+
+.single-team-member { 
+
+   box-shadow: 0px 2px 8px -5px #666;
+
+  margin: 5px;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;transition: 1s;
+}
+.single-team-member-picture {}
+.single-team-member-picture a img{border-radius: 500px;}
+
+.single-team-member-name {text-align: center;margin-top: 39px;}
+.single-team-member-name h2{margin-bottom: 13px;}
+.single-team-member-name h2 a{font-family: poppins;font-weight: 500;font-size: 18px;color:#444444;text-transform: uppercase;}
+
+.single-team-member-name h3{font-family: poppins;font-weight: 300;font-size: 14px;color:#444444;margin-bottom: 0;}
+
+.single-team-member-social {margin-top:30px;text-align: center;}
+.single-team-member-social a {margin-right: 20px;}
+.single-team-member-social a:last-child{margin-right:0;}
+.single-team-member-social a i {color: #cccccc;
+font-size: 18px;
+height: 40px;
+width: 40px;
+border: 1px solid #cccccc;
+border-radius: 500px;
+padding-top: 10px;}
+
+.single-team-member:hover {box-shadow: 0px 7px 26px -16px #666;}
+.single-team-member:hover .single-team-member-name h2 a{color:#4b278f;transition:1s;}
+.single-team-member:hover .single-team-member-name h3{color:#4b278f;transition:1s;}
+.single-team-member:hover .single-team-member-social a i {color: #4b278f;border: 1px solid #4b278f;transition:1s;}
+
+.our-talent-slider-content .owl-nav{position: absolute;top: 200px;left: -15%;margin: 0 auto;right: -15%;}
+.our-talent-slider-content .owl-nav .owl-prev{float: left;}
+.our-talent-slider-content .owl-nav .owl-prev i{font-size: 30px;
+color: #cccccc;}
+.our-talent-slider-content .owl-nav .owl-next{float: right;}
+.our-talent-slider-content .owl-nav .owl-next i{font-size: 30px;
+color: #cccccc;}
+.our-talent-slider-content .owl-nav .owl-prev i:hover{color:#4b278f;}
+.our-talent-slider-content .owl-nav .owl-next i:hover{color:#4b278f;}
+
