@@ -4,7 +4,7 @@ Tags: elementor, elementor popular widget, cretive elementor widget, elementor a
 Requires at least: 4.7
 Tested up to: 6.0.1
 Stable tag: 1.0
-Requires PHP: 7.3
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
