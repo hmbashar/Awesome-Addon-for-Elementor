@@ -167,19 +167,6 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 			]
 		);
 
-        // Person Picture
-        $this->add_control(
-			'aefe-tm-member-pic-dimension',
-			[
-				'label' => esc_html__( 'Image Dimension', 'aefe' ),
-				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
-				'description' => esc_html__( 'Crop the original image size to 211x211px size.', 'aefe' ),
-				'default' => [
-					'width' => '',
-					'height' => '',
-				],
-			]
-		);
 		$this->end_controls_section();
 
         // Social Profile Section
@@ -290,7 +277,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'list_color',
 			[
-				'label' => esc_html__( 'Color', 'plugin-name' ),
+				'label' => esc_html__( 'Color', 'aefe' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}'
@@ -337,18 +324,21 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 							if(!empty($settings['aefe-tm-slider-list'])) :
 							
 								foreach($settings['aefe-tm-slider-list'] as $team_member_slider) :
-
-									echo '<pre>';
-									print_r($team_member_slider);
+									if(!empty($team_member_slider['aefe-tm-member-picture']['url'])) {
+										$team_img = $team_member_slider['aefe-tm-member-picture']['url'];
+									}else {
+										$team_img = NULL;
+									}						
+									
 						?>
 							<!--Single Team Member-->
-							<div class="single-team-member">
+							<div class="single-team-member elementor-repeater-item-<?php echo esc_attr($team_member_slider['_id']); ?>">
 								<div class="single-team-member-picture">
-									<a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
+									<a><img src="<?php echo esc_url($team_img); ?>" alt="<?php echo esc_html($team_member_slider['aefe-tm-name']); ?>"></a>
 								</div>
 								<div class="single-team-member-name">
-									<h2><a href="">HASI KHUSI</a></h2>
-									<h3>Advisor of Team</h3>
+									<h2><a><?php echo esc_html($team_member_slider['aefe-tm-name']); ?></a></h2>
+									<h3><?php echo esc_html($team_member_slider['aefe-tm-subtitle']); ?></h3>
 								</div>
 								<div class="single-team-member-social">
 									<a href=""><i class="fab fa-facebook-f"></i></a>
