@@ -222,33 +222,71 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         Repeater Control
         -----------------------------------------------------------------*/
         $this->start_controls_section(
-			'content_section',
+			'aefe-tm-slider-content_section',
 			[
-				'label' => esc_html__( 'Content', 'plugin-name' ),
+				'label' => esc_html__( 'Content', 'aefe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+				'condition' => [
+                    'aefe-tm-repeater-single' => 'slider',
+                ],
 			]
 		);
 
 		$repeater = new \Elementor\Repeater();
 
+		// Person Name
 		$repeater->add_control(
-			'list_title', [
-				'label' => esc_html__( 'Title', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'List Title' , 'plugin-name' ),
-				'label_block' => true,
+			'aefe-tm-name',
+			[
+				'label' => esc_html__( 'Name', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,				
+				'placeholder' => esc_html__( 'Member Name', 'AEFE' ),
+				'default' => esc_html__( 'Member #1' , 'plugin-name' ),
+			]
+		);
+		
+		// Person subtitle
+		$repeater->add_control(
+			'aefe-tm-subtitle',
+			[
+				'label' => esc_html__( 'Sub Title', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::TEXT,				
+				'placeholder' => esc_html__( 'Subtitle', 'AEFE' ),
 			]
 		);
 
-		$repeater->add_control(
-			'list_content', [
-				'label' => esc_html__( 'Content', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::WYSIWYG,
-				'default' => esc_html__( 'List Content' , 'plugin-name' ),
-				'show_label' => false,
+        // Person Picture
+        $repeater->add_control(
+			'aefe-tm-member-picture',
+			[
+				'label' => esc_html__( 'Member Picture', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
 			]
 		);
-
+		// facebook url 
+		$repeater->add_control(
+			'aefe-tm-facebook',
+			[
+				'label' => esc_html__( 'Facebook URL', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::URL,				
+				'placeholder' => esc_html__( 'https://fb.com/hmbashar', 'AEFE' ),
+                'label_block' => true,
+			]
+		);
+		
+		// Twitter URL subtitle
+		$repeater->add_control(
+			'aefe-tm-twitter',
+			[
+				'label' => esc_html__( 'Twitter URL', 'AEFE' ),
+				'type' => \Elementor\Controls_Manager::URL,				
+				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', 'AEFE' ),
+                'label_block' => true,
+			]
+		);
 		$repeater->add_control(
 			'list_color',
 			[
@@ -261,22 +299,11 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'list',
+			'aefe-tm-slider-list',
 			[
-				'label' => esc_html__( 'Repeater List', 'plugin-name' ),
+				'label' => esc_html__( 'Slider List', 'aefe' ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
-				'default' => [
-					[
-						'list_title' => esc_html__( 'Title #1', 'plugin-name' ),
-						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'plugin-name' ),
-					],
-					[
-						'list_title' => esc_html__( 'Title #2', 'plugin-name' ),
-						'list_content' => esc_html__( 'Item content. Click the edit button to change this text.', 'plugin-name' ),
-					],
-				],
-				'title_field' => '{{{ list_title }}}',
 			]
 		);
 
