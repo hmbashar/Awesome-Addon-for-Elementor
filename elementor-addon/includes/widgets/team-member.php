@@ -327,123 +327,36 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		?>
 
 	       <!-- Our Talent Team Area-->
-           <section class="our-talent-team-area fix">
-           <div class="our-talent-team column section-margin">
+        <section class="our-talent-team-area fix">
+           	<div class="our-talent-team column section-margin">
                <!--Our Talent Team Bottom/Content-->
                <div class="ourtalent-team-bottom">
                     <div class="our-talent-slider-content owl-carousel">
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">HASI KHUSI</a></h2>
-                                <h3>Advisor of Team</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-1.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">AHMED AMIR</a></h2>
-                                <h3>Head of Office</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-2.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">RANIA ASKHAR</a></h2>
-                                <h3>UI/UX Designer</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-3.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">CHIRO KUMAR</a></h2>
-                                <h3>Developer</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">HASI KHUSI</a></h2>
-                                <h3>Advisor of Team</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-1.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">AHMED AMIR</a></h2>
-                                <h3>Head of Office</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-2.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">RANIA ASKHAR</a></h2>
-                                <h3>UI/UX Designer</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
-                        <!--Single Team Member-->
-                        <div class="single-team-member">
-                            <div class="single-team-member-picture">
-                                <a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member-3.png" alt=""></a>
-                            </div>
-                            <div class="single-team-member-name">
-                                <h2><a href="">CHIRO KUMAR</a></h2>
-                                <h3>Developer</h3>
-                            </div>
-                            <div class="single-team-member-social">
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div><!--/ Single Team Member-->
+
+						<?php 
+							if(!empty($settings['aefe-tm-slider-list'])) :
+							
+								foreach($settings['aefe-tm-slider-list'] as $team_member_slider) :
+
+									echo '<pre>';
+									print_r($team_member_slider);
+						?>
+							<!--Single Team Member-->
+							<div class="single-team-member">
+								<div class="single-team-member-picture">
+									<a href=""><img src="<?php echo AEFE_URL ?>/assets/img/single-team-member.png" alt=""></a>
+								</div>
+								<div class="single-team-member-name">
+									<h2><a href="">HASI KHUSI</a></h2>
+									<h3>Advisor of Team</h3>
+								</div>
+								<div class="single-team-member-social">
+									<a href=""><i class="fab fa-facebook-f"></i></a>
+									<a href=""><i class="fab fa-twitter"></i></a>
+								</div>
+							</div><!--/ Single Team Member-->
+						<?php endforeach; endif; ?>
+
                     </div>
                </div><!--/ Our Talent Team Bottom/Content-->
            </div>
