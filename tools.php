@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Awesome Elements For Elementor
  * Description: This plugin for elements widget for elementor
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Md Abul Bashar
  * Author URI: https://www.facebook.com/hmbashar/
  * Text Domain: AEFE
