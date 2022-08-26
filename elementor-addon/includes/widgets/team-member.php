@@ -324,10 +324,12 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 							if(!empty($settings['aefe-tm-slider-list'])) :
 							
 								foreach($settings['aefe-tm-slider-list'] as $team_member_slider) :
+
+									// check if member image has set.
 									if(!empty($team_member_slider['aefe-tm-member-picture']['url'])) {
 										$team_img = $team_member_slider['aefe-tm-member-picture']['url'];
 									}else {
-										$team_img = NULL;
+										$team_img = AEFE_URL.'/assets/img/single-team-member-1.png'; // fallback placeholder image
 									}						
 									
 						?>
