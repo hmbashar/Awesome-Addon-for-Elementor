@@ -85,7 +85,7 @@
   padding-bottom: 20px;
   margin-bottom: 30px;transition: 1s;
 }
-.single-team-member-picture {}
+.single-team-member-picture {    text-align: center;}
 .single-team-member-picture a img{border-radius: 500px;}
 
 .single-team-member-name {text-align: center;margin-top: 39px;}

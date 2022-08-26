@@ -40,6 +40,10 @@ No, don't need, this plugin will work with free version, so don't worry.
 == Screenshots ==
 
 1. Pricing Table 
+2. Team Member Single
+3. Team Member Slider
+4. Team Member Single and slider (both)
+5. Pricing Table Style two
 
 
 == Changelog ==

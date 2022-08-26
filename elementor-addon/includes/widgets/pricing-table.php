@@ -272,6 +272,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
+		// package url checked
 		if ( ! empty( $settings['pacakge_button_url']['url'] ) ) {
 			$this->add_link_attributes( 'pacakge_button_url', $settings['pacakge_button_url'] );
 		}
