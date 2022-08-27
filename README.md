@@ -1,12 +1,12 @@
 # Awesome Elements For Elementor 
-> Contributors: hmbashar
-> Tags: elementor, elementor popular widget, cretive elementor widget, elementor addon, awesome design, wordpress plugin
-> Requires at least: 4.7
-> Tested up to: 6.0.1
-> Stable tag: 1.0.1
-> Requires PHP: 7.4
-> License: GPLv2 or later
-> License URI: https://www.gnu.org/licenses/gpl-2.0.html
+> Contributors: hmbashar<br>
+> Tags: elementor, elementor popular widget, cretive elementor widget, elementor addon, awesome design, wordpress plugin<br>
+> Requires at least: 4.7<br>
+> Tested up to: 6.0.1<br>
+> Stable tag: 1.0.1<br>
+> Requires PHP: 7.4<br>
+> License: GPLv2 or later<br>
+> License URI: https://www.gnu.org/licenses/gpl-2.0.html<br>
 
 
 
@@ -29,7 +29,7 @@ Awesome Elements For Elementor is an ultimate All in one addons for Elementor Pa
 
 2. Does this work with any theme? 
 
-    .bsolutely! It will work with any theme where Elementor works but we'll recommended Hello Elementor theme.
+    - absolutely! It will work with any theme where Elementor works but we'll recommended Hello Elementor theme.
 
 
 3. Do I need to use Elementor Pro version for this plugin? =
