@@ -136,10 +136,10 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 		$this->add_control(
 			'package_name',
 			[
-				'label' => esc_html__( 'Pacakge Name', 'AEFE' ),
+				'label' => esc_html__( 'Package Name', 'AEFE' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__( 'Starter', 'AEFE' ),
-				'placeholder' => esc_html__( 'Pacakge Name', 'AEFE' ),
+				'placeholder' => esc_html__( 'Package Name', 'AEFE' ),
 			]
 		);
 		$this->end_controls_section();
