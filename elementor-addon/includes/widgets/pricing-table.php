@@ -1,5 +1,5 @@
 <?php
-namespace AEFE_ELEMENTOR;
+namespace AEFE_ELEMENTOR\PricingTable;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.

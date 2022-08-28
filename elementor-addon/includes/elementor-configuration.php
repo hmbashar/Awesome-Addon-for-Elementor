@@ -220,8 +220,8 @@ final class Plugin {
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/team-member.php' ); // Team Member file
 		
 
-		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFE_Pricing_Table() ); // call pricing table class
-		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFE_TeamMember() ); // Team Member class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\PricingTable\AEFE_Pricing_Table() ); // call pricing table class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\TeamMember\AEFE_TeamMember() ); // Team Member class
 		
 
 	}
