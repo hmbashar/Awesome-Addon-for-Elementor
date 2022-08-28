@@ -39,11 +39,11 @@ Awesome Elements For Elementor is an ultimate All in one addons for Elementor Pa
 
 ### Screenshots 
 
-- Pricing Table 
-- Team Member Single
-- Team Member Slider
-- Team Member Single and slider (both)
-- Pricing Table Style two
+- [Pricing Table] (https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-1.jpg?raw=true)
+- [Team Member Single] (https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-2.jpg?raw=true)
+- [Team Member Slider] (https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-3.jpg?raw=true)
+- [Team Member Single and slider] (https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-4.jpg?raw=true)
+- [Pricing Table Style two] (https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-5.jpg?raw=true)
 
 
 ### Changelog 
