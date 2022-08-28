@@ -14,11 +14,12 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Awesome Elements For Elementor is an ultimate All in one addons for Elementor Page Builder. It includes most cretive design modules, It has right now 1 and more plus custom widgets coming soon such as Pricing table, Team member, testimonial, Accordion, tab, Countdown Timer etc to create any sites with ease. Take your Elementor page building experience to the next level with "Awesome Elements For Elementor" for Elementor. 
 
+You're welcome to contribute to the plugin on the [Github](https://github.com/hmbashar/Awesome-Addon-for-Elementor)
 
 **KEY FEATURES**
 
-* Pricing Table
-* Team Member
+* [Pricing Table](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-1.jpg?raw=true)
+* [Team Member](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-4.jpg?raw=true)
 * More Coming soon
 
 == Frequently Asked Questions ==

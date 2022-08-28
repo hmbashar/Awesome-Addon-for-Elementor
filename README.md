@@ -14,6 +14,7 @@
 
 Awesome Elements For Elementor is an ultimate All in one addons for Elementor Page Builder. It includes most cretive design modules, It has right now 1 and more plus custom widgets coming soon such as Pricing table, Team member, testimonial, Accordion, tab, Countdown Timer etc to create any sites with ease. Take your Elementor page building experience to the next level with "Awesome Elements For Elementor" for Elementor. 
 
+This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elements-for-elementor/)
 
 ### KEY FEATURES
 
