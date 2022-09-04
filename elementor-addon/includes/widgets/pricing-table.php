@@ -248,16 +248,355 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 		
 		$this->end_controls_section();
 
-		// Package Price Style
+		// Pricing Header Section Style
 		$this->start_controls_section(
-			'package_price_section_style',
+			'aefe_pricing_heading_section_style',
 			[
-				'label'		=> esc_html__( 'Package Price Style', 'AEFE' ),
+				'label'		=> esc_html__( 'Header', 'AEFE' ),
 				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
+		// Header Background
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe-tm-background',
+				'label' => esc_html__( 'Background', 'AEFE' ),
+				'types' => [ 'classic', 'gradient', 'video' ],
+				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-table-header',
+			]
+		);
+		//Heading Color
+		$this->add_control(
+			'aefe-pricing-heading-color',
+			[
+				'label' => esc_html__( 'Title Color', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-single-pricing-table-header h2' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Title Typhography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe-pt-title-typography',
+				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-table-header h2',
+			]
+		);
+
+
+		$this->end_controls_section(); // Pricing Header Section Style
+
+		// Pricing Pricing Section Style
+		$this->start_controls_section(
+			'aefe_pt-price_style',
+			[
+				'label'		=> esc_html__( 'Pricing', 'AEFE' ),
+				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+		//Pricing Color
+		$this->add_control(
+			'aefe-pricing-price-color',
+			[
+				'label' => esc_html__( 'Price Color', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-single-pricing-price h2' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Price Typhography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'label'		=> esc_html__( 'Typography', 'AEFE' ),
+				'name' => 'aefe-pt-price-typography',
+				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-price h2',
+			]
+		);
+
+
+		$this->end_controls_section(); // Pricing Pricing Section Style
+
+		// Pricing Content Section Style
+		$this->start_controls_section(
+			'aefe_pt-content_style',
+			[
+				'label'		=> esc_html__( 'Content', 'AEFE' ),
+				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+		//content Color
+		$this->add_control(
+			'aefe-pricing-content-color',
+			[
+				'label' => esc_html__( 'Content Color', 'aefe' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-single-pricing-content' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Content Typhography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'label'		=> esc_html__( 'Typography', 'AEFE' ),
+				'name' => 'aefe-pt-content-typography',
+				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-content',
+			]
+		);
+
+
+		$this->end_controls_section(); // Pricing Content Section Style
+	
+		// Pricing Button Section Style
+        $this->start_controls_section(
+			'aefe_pt_btn_section_style',
+			[
+				'label' =>esc_html__( 'Button', 'aefe'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'width',
+			[
+				'label'			=> esc_html__( 'Width (%)', 'aefe'),
+				'type'			=> \Elementor\Controls_Manager::SLIDER,
+				'selectors'		=> [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy' => 'width: {{SIZE}}%;',
+				]
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_pt_btn_text_padding',
+			[
+				'label' =>esc_html__( 'Padding', 'aefe'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_pt_btn_typography',
+				'label' =>esc_html__( 'Typography', 'aefe'),
+				'selector' => '{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a',
+			]
+		);
+
+        $this->add_group_control(
+        	\Elementor\Group_Control_Text_Shadow::get_type(),
+        	[
+        		'name' => 'aefe_pt_btn_shadow',
+        		'selector' => '{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a',
+        	]
+        );
+
+		$this->start_controls_tabs( 'aefe_pt_btn_tabs_style' );
+
+		$this->start_controls_tab(
+			'aefe_pt_btn_tab_normal',
+			[
+				'label' =>esc_html__( 'Normal', 'aefe'),
+			]
+		);
+
+		$this->add_control(
+			'aefe_pt_btn_text_color',
+			[
+				'label' =>esc_html__( 'Text Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'stroke: {{VALUE}}; fill: {{VALUE}};',
+				],
+			]
+		);
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Background::get_type(),
+            array(
+				'name'     => 'aefe_pt_btn_bg_color',				
+				'selector' => '{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a',
+            )
+        );
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'aefe_pt_btn_tab_button_hover',
+			[
+				'label' =>esc_html__( 'Hover', 'aefe'),
+			]
+		);
+
+		$this->add_control(
+			'aefe_pt_btn_hover_color',
+			[
+				'label' =>esc_html__( 'Text Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two.aefe-pt-single-pricing-table:hover .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a' => 'color: {{VALUE}};',					
+				],
+			]
+		);
+
+	    $this->add_group_control(
+		    \Elementor\Group_Control_Background::get_type(),
+		    array(
+			    'name'     => 'aefe_pt_btn_bg_hover_color',
+			    'default' => '',
+			    'selector' => '{{WRAPPER}} .aefe-pt-style-two.aefe-pt-single-pricing-table:hover .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a',
+		    )
+	    );
+
+		$this->end_controls_tab();
+		$this->end_controls_tabs();
+		$this->end_controls_section();
+
+        $this->start_controls_section(
+			'aefe_pt_btn_border_style_tabs',
+			[
+				'label' =>esc_html__( 'Border', 'aefe'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_pt_btn_border_style',
+			[
+				'label' => esc_html_x( 'Border Type', 'Border Control', 'aefe'),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'options' => [
+					'none' => esc_html__( 'None', 'aefe'),
+					'solid' => esc_html_x( 'Solid', 'Border Control', 'aefe'),
+					'double' => esc_html_x( 'Double', 'Border Control', 'aefe'),
+					'dotted' => esc_html_x( 'Dotted', 'Border Control', 'aefe'),
+					'dashed' => esc_html_x( 'Dashed', 'Border Control', 'aefe'),
+					'groove' => esc_html_x( 'Groove', 'Border Control', 'aefe'),
+				],
+				'default'	=> 'none',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'border-style: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'aefe_pt_btn_border_dimensions',
+			[
+				'label' 	=> esc_html_x( 'Width', 'Border Control', 'aefe'),
+				'type' 		=> \Elementor\Controls_Manager::DIMENSIONS,
+				'condition'	=> [
+					'aefe_pt_btn_border_style!' => 'none'
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->start_controls_tabs( 'xs_tabs_button_border_style' );
+		$this->start_controls_tab(
+			'aefe_pt_btn_tab_border_normal',
+			[
+				'label' =>esc_html__( 'Normal', 'aefe'),
+			]
+		);
+
+		$this->add_control(
+			'aefe_pt_btn_border_color',
+			[
+				'label' => esc_html_x( 'Color', 'Border Control', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'aefe_pt_btn_border_radius',
+			[
+				'label' =>esc_html__( 'Border Radius', 'aefe'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%'],
+				'default' => [
+					'top' => '',
+					'right' => '',
+					'bottom' => '' ,
+					'left' => '',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two .aefe-pt-single-pricing-buy a' =>  'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'aefe_pt_btn_tab_button_border_hover',
+			[
+				'label' =>esc_html__( 'Hover', 'aefe'),
+			]
+		);
+		$this->add_control(
+			'aefe_pt_btn_hover_border_color',
+			[
+				'label' => esc_html_x( 'Color', 'Border Control', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-pt-style-two.aefe-pt-single-pricing-table:hover .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a' => 'border-color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_responsive_control(
+			'aefe_pt_btn_border_radius_h',
+			[
+				'label' =>esc_html__( 'Border Radius', 'aefe'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .elementskit-btn:hover' =>  'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->end_controls_tab();
+		$this->end_controls_tabs();
+		$this->end_controls_section();
+
+        $this->start_controls_section(
+			'aefe_pt_btn_box_shadow_style',
+			[
+				'label' =>esc_html__( 'Shadow', 'aefe'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+			  'name' => 'aefe_pt_btn_box_shadow_group',
+			  'selector' => '{{WRAPPER}} .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a',
+			]
+		);
+
 
 		$this->end_controls_section();
+
 
 	}
 

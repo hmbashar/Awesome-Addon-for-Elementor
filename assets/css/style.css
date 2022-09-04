@@ -47,7 +47,7 @@
  .aefe-pt-style-two .aefe-pt-single-pricing-content {text-align: center;padding-left: 15px;padding-right: 15px;margin-top: 40px;}
  .aefe-pt-style-two .aefe-pt-single-pricing-content p {color: #666666;font-size: 16px;font-family: roboto;font-weight: 500;margin-bottom: 30px;}
  .aefe-pt-style-two .aefe-pt-single-pricing-buy {text-align: center;margin-bottom: 40px;margin-top: 45px;}
- .aefe-pt-style-two .aefe-pt-single-pricing-buy a{background-color: #cccccc;color: #fff;display: inline-block;padding: 15px 50px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;transition: 1s;}
+ .aefe-pt-style-two .aefe-pt-single-pricing-buy a{/*background-color: #cccccc;*/color: #fff;display: inline-block;padding: 15px 50px;border-radius: 100px;margin-top: 10px;margin-bottom: 10px;transition: 1s;}
 .aefe-pt-style-two.aefe-pt-single-pricing-table:hover .aefe-pt-st-two-b.aefe-pt-single-pricing-buy a{transition:1s;box-shadow: 0px 6px 16px -8px #03bee4;background-color:#03bee4 !important; color:#fff;}
 .aefe-pt-style-two .aefe-pt-single-pricing-table:hover {box-shadow: 0px 14px 40px -25px #666;}
 
