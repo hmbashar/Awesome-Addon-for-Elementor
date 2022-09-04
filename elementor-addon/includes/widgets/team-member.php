@@ -320,11 +320,11 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 
 	
 	       <!-- Our Talent Team Area-->
-        <section class="our-talent-team-area fix">
-           	<div class="our-talent-team column section-margin">
+        <section class="aefe-tm-our-talent-team-area fix">
+           	<div class="aefe-tm-our-talent-team column section-margin">
                <!--Our Talent Team Bottom/Content-->
-               <div class="ourtalent-team-bottom">
-                    <div class="our-talent-slider-content owl-carousel">
+               <div class="aefe-tm-ourtalent-team-bottom">
+                    <div class="aefe-tm-our-talent-slider-content owl-carousel">
 
 						<?php 
 							if(!empty($settings['aefe-tm-slider-list'])) :
@@ -351,15 +351,15 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 							
 						?>
 							<!--Single Team Member-->
-							<div class="single-team-member elementor-repeater-item-<?php echo esc_attr($team_member_slider['_id']); ?>">
-								<div class="single-team-member-picture">
+							<div class="aefe-tm-single-team-member elementor-repeater-item-<?php echo esc_attr($team_member_slider['_id']); ?>">
+								<div class="aefe-tm-single-team-member-picture">
 									<a><img src="<?php echo esc_url($team_img); ?>" alt="<?php echo esc_html($team_member_slider['aefe-tm-name']); ?>"></a>
 								</div>
-								<div class="single-team-member-name">
+								<div class="aefe-tm-single-team-member-name">
 									<h2><a><?php echo esc_html($team_member_slider['aefe-tm-name']); ?></a></h2>
 									<h3><?php echo esc_html($team_member_slider['aefe-tm-subtitle']); ?></h3>
 								</div>
-								<div class="single-team-member-social">
+								<div class="aefe-tm-single-team-member-social">
 									<a <?php echo $this->get_render_attribute_string( 'aefe-tm-facebook' ); ?> ><i class="fab fa-facebook-f"></i></a>
 									<a <?php echo $this->get_render_attribute_string( 'aefe-tm-twitter' ); ?> ><i class="fab fa-twitter"></i></a>
 								</div>
@@ -398,15 +398,15 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		?>
 
 	<!--Single Team Member-->
-	<div class="single-team-member">
-		<div class="single-team-member-picture">
+	<div class="aefe-tm-single-team-member">
+		<div class="aefe-tm-single-team-member-picture">
 			<a><img src="<?php echo esc_url($team_single_img); ?>" alt="<?php echo esc_html($settings['aefe-tm-name']); ?>"></a>
 		</div>
-		<div class="single-team-member-name">
+		<div class="aefe-tm-single-team-member-name">
 			<h2><a><?php echo esc_html($settings['aefe-tm-name']); ?></a></h2>
 			<h3><?php echo esc_html($settings['aefe-tm-subtitle']); ?></h3>
 		</div>
-		<div class="single-team-member-social">
+		<div class="aefe-tm-single-team-member-social">
 			<a <?php echo $this->get_render_attribute_string( 'aefe-tm-facebook' ); ?> ><i class="fab fa-facebook-f"></i></a>
 			<a <?php echo $this->get_render_attribute_string( 'aefe-tm-twitter' ); ?> ><i class="fab fa-twitter"></i></a>
 		</div>

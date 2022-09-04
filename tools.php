@@ -52,6 +52,9 @@ function aefe_stylesheet_enque() {
 add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
 
 
+
+
+
 function aefe_general_function() {
 	add_image_size( 'our-work', 400, 300, true );
 }

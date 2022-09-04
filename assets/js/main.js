@@ -6,7 +6,7 @@ Both Page
 -------------------------*/
 
 	// Our Talent Slider
-	$(".our-talent-slider-content").owlCarousel({				
+	$(".aefe-tm-our-talent-slider-content").owlCarousel({				
 			items: 4,
 			autoplay: true,				
 			loop: true,
