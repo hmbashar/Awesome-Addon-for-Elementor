@@ -16,11 +16,18 @@ Awesome Elements For Elementor is an ultimate All in one addons for Elementor Pa
 
 This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elements-for-elementor/)
 
+### How to Contribute? (Must Watch)
+
+[![Contribution for Awesome Elements For Elementor](http://img.youtube.com/vi/eHR2jQ_fHIc/0.jpg)](http://www.youtube.com/watch?v=eHR2jQ_fHIc "Contribution for Awesome Elements For Elementor")
+
+[![Contribution for Awesome Elements For Elementor 2](http://img.youtube.com/vi/5UZfqzXbPPI/0.jpg)](http://www.youtube.com/watch?v=5UZfqzXbPPI "Contribution for Awesome Elements For Elementor 2")
+
 ### KEY FEATURES
 
 - Pricing Table
 - Team Member
 - More Coming soon
+
 
 ### Frequently Asked Questions 
 
