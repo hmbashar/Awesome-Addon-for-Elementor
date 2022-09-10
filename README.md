@@ -59,5 +59,8 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 
 ### Changelog 
 
+- 1.0.1
+    - added style field/tab for the existing widget.
+
 - 1.0 =
     - Just release the new plugin.

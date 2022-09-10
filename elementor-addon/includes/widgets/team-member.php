@@ -297,6 +297,146 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->end_controls_section();
 
 
+		// Style Tab for Team Member Single Style
+        $this->start_controls_section(
+			'aefe_tm_single_section_style',
+			[
+				'label' =>esc_html__( 'Single', 'aefe'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,				
+			]
+		);
+		
+		//Title Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_tm_title_typography',
+				'label' =>esc_html__( 'Title Typography', 'aefe'),
+				'selector' => '{{WRAPPER}} .aefe-tm-single-team-member-name h2 a',
+			]
+		);
+
+		// Title Color
+		$this->add_control(
+			'aefe_tm_title_color',
+			[
+				'label' =>esc_html__( 'Title Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member-name h2 a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		//SubTitle Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_tm_subtitle_typography',
+				'label' =>esc_html__( 'Subtitle Typography', 'aefe'),
+				'selector' => '{{WRAPPER}} .aefe-tm-single-team-member-name h3',
+			]
+		);
+
+		// Title Color
+		$this->add_control(
+			'aefe_tm_subtitle_color',
+			[
+				'label' =>esc_html__( 'Subtitle Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member-name h3' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_section(); //  End Style Tab for Team Member Single Style
+
+
+		// Social Icon Style Normal and Hover
+		// Pricing Button Section Style
+        $this->start_controls_section(
+			'aefe_tm_social_section_style',
+			[
+				'label' =>esc_html__( 'Social Profile', 'aefe'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->start_controls_tabs( 'aefe_tm_social_tabs_style' );
+
+		$this->start_controls_tab(
+			'aefe_tm_social_tab_normal',
+			[
+				'label' =>esc_html__( 'Normal', 'aefe'),
+			]
+		);
+
+		$this->add_control(
+			'aefe_tm_social_color',
+			[
+				'label' =>esc_html__( 'Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member-social a i' => 'color: {{VALUE}};border-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_tm_social_bg_color',
+			[
+				'label' =>esc_html__( 'Background Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member-social a i' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'aefe_tm_social_tab_button_hover',
+			[
+				'label' =>esc_html__( 'Hover', 'aefe'),
+			]
+		);
+
+
+		$this->add_control(
+			'aefe_tm_social_color_hover',
+			[
+				'label' =>esc_html__( 'Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member:hover .aefe-tm-single-team-member-social a i' => 'color: {{VALUE}};border-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_tm_social_bg_color_hover',
+			[
+				'label' =>esc_html__( 'Background Color', 'aefe'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-single-team-member:hover .aefe-tm-single-team-member-social a i' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+
+		$this->end_controls_tab();
+		$this->end_controls_tabs();
+
+		$this->end_controls_section();
+
+
 
 	}
 
