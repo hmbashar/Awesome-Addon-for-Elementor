@@ -108,3 +108,81 @@ color: #cccccc;}
 color: #cccccc;}
 .aefe-tm-our-talent-slider-content .owl-nav .owl-prev i:hover{color:#4b278f;}
 .aefe-tm-our-talent-slider-content .owl-nav .owl-next i:hover{color:#4b278f;}
+
+
+
+/*---------------------------------------
+    Our Services
+-----------------------------------------*/
+
+.romana_single_our_service{
+   border: 1px solid transparent;
+   padding: 28px 20px 27px 18px;
+   margin-top: 12px;
+   margin-bottom: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.5s;
+   }
+   .romana_single_our_service:hover{
+          border: 1px solid #c8c8c8;
+      }
+   .romana_single_our_service:hover .our_service_icon{
+      background: black;
+   }
+   .our_service_icon {
+            background: #f7a914;
+            display: inline-block;
+            float: left;
+            padding: 5px 6px;
+          transition-duration:0.5s;
+          padding-bottom: 1px;
+   }
+   .romana_single_our_service .our_service_icon img {
+      border: 1px dashed #fff;
+      padding: 15px;
+   
+   }
+          
+   .romana_single_our_service .our_service_title {
+      padding-left: 108px;
+   }
+   .romana_single_our_service .our_service_title h3 {
+     font-size: 20px;
+     margin-bottom: 5px;
+     padding-top: 10px;
+    font-weight: 400;
+   text-transform: capitalize;
+   }
+   
+   
+   .romana_single_our_service .skill_rate {
+     font-size: 16px;
+    color: #f7a914;
+   }
+   
+   .romana_single_our_service .barfiller {
+     background: #d3d3d3 none repeat scroll 0 0;
+     border: medium none;
+     border-radius: 10px;
+     box-shadow: none;
+     height: 6px;
+     margin-bottom: 20px;
+     position: relative;
+     width: 100%;
+     margin-top: -3px;
+   }
+   .barfiller .fill {
+          border-radius: 6px;
+      }
+   .barfiller .tip::after {
+          display: none;
+      }
+   .barfiller .tip {
+      background: transparent none repeat scroll 0 0;  
+      font-size: 15px;
+      margin-top: -38px;
+   }
+   .our_service_text {
+          padding-top: 20px;
+      }
+   

@@ -218,10 +218,12 @@ final class Plugin {
 
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/pricing-table.php' ); // add pricing table file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/team-member.php' ); // Team Member file
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/services/services.php' ); // Services file
 		
 
 		$widgets_manager->register( new \AEFE_ELEMENTOR\PricingTable\AEFE_Pricing_Table() ); // call pricing table class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\TeamMember\AEFE_TeamMember() ); // Team Member class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFEService\AEFE_Service() ); // Team Member class
 		
 
 	}

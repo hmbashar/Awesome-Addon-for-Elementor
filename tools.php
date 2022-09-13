@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Awesome Elements For Elementor
  * Description: This plugin for elements widget for elementor
- * Version: 1.0.1
+ * Version: 1.2
  * Author: Md Abul Bashar
  * Author URI: https://www.facebook.com/hmbashar/
  * Text Domain: AEFE
@@ -39,14 +39,16 @@ add_action( 'plugins_loaded', 'aefe_plugin_general_init' );
  * Enqueue scripts and styles.
  */
 function aefe_stylesheet_enque() {    
-	//Awesome Elements plugin main stylesheet
-    wp_enqueue_style( 'aefe_main_stylesheet',  AEFE_URL . "/assets/css/style.css");
     wp_enqueue_style( 'owlcarousel',  AEFE_URL . "/assets/css/owl.carousel.min.css");
+    wp_enqueue_style( 'barfilter',  AEFE_URL . "/assets/css/barfilter.css");
+	//Awesome Elements plugin main stylesheet
+	wp_enqueue_style( 'aefe_main_stylesheet',  AEFE_URL . "/assets/css/style.css");
 	//Awesome Elements Plugin Responsive Stylesheet
     wp_enqueue_style( 'aefe_responsive_stylesheet',  AEFE_URL . "/assets/css/responsive.css", array('aefe_main_stylesheet'));
 
 	//OWL Carousel jQuery
 	wp_enqueue_script( 'owlcarousel', AEFE_URL . "/assets/js/owl.carousel.min.js", array( 'jquery' ), false, true );
+	wp_enqueue_script( 'barfiller', AEFE_URL . "/assets/js/jquery.barfiller.js", array( 'jquery' ), false, true );
 	wp_enqueue_script( 'aefe_main_jquery', AEFE_URL . "/assets/js/main.js", array( 'jquery' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
