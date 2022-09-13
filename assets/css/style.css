@@ -130,8 +130,7 @@ color: #cccccc;}
       background: black;
    }
    .our_service_icon {
-            background: #f7a914;
-            display: inline-block;
+            background: #f7a914;           
             float: left;
             padding: 5px 6px;
           transition-duration:0.5s;
