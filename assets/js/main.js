@@ -78,7 +78,7 @@ Both Page
 	$(".aefe-tm-sth-our-team-content-area").owlCarousel({
 			
 		items: 3,
-		//autoplay: true,
+		autoplay: true,
 		nav: false,			
 		dots: false,
 		margin:32,
@@ -99,6 +99,16 @@ Both Page
 		loop: true
 	
 	});
+
+	//testimonial style three
+	$(".aefe-tm-3-testimonial-slider").owlCarousel({			
+		items: 1,
+		autoplay: true,
+		nav: false,			
+		dots: true,
+		loop: true		
+	
+	});	
 
 
 })(jQuery);

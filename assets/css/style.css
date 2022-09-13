@@ -406,3 +406,52 @@ color: #fff;
 padding: 5px 7px;
 background: #cccccc;margin-right:12px;transition:0.5s ease-out;}
 .aefe-tm-sth-team-socials-profile a i:hover{background:#7f8ce3;transition:0.5s;}
+
+
+
+/*=======================================
+    Testimonial Style Three          
+=========================================*/
+.aefe-tm-3-testimonial-area{background: #7f8ce3; /* Old browsers */
+   background: -moz-linear-gradient(left, #7f8ce3 0%, #55bde3 41%, #32dee1 81%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(left, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to right, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f8ce3', endColorstr='#32dee1',GradientType=1 ); /* IE6-9 */
+ padding-top:70px;padding-bottom: 70px;}
+
+   
+   .aefe-tm-3-single-testimonial {text-align: center;
+   width: 80%;
+   margin: 0 auto;
+   }
+   .aefe-tm-3-testimonial {
+      max-width: 1000px;
+      margin:0 auto;
+    }
+   .aefe-tm-3-testimonial-img {position: absolute;
+   bottom: -100%;
+   left: 21%;visibility: hidden;transition: 1s ease-out;max-width: 120px;}
+  .aefe-tm-3-testimonial-client-info:hover .aefe-tm-3-testimonial-img {visibility:visible;transition:1s;bottom: 11px;}
+  .aefe-tm-3-testimonial-icon i{font-size:44px;color:#fff;}
+   .aefe-tm-3-testimonial-message {margin-top: 18px;}
+   .aefe-tm-3-testimonial-message p{font-size: 16px;
+   font-family: roboto;
+   font-weight: 400;
+   color: #fff;
+   line-height: 30px;}
+   .aefe-tm-3-testimonial-client-info {position: relative;}
+   .aefe-tm-3-testi_client_name {margin-top: 30px;
+   border-top: 1px solid #fff;
+   display: inline-block;
+   padding-top: 30px;color:#fff;font-family: roboto;}
+   .aefe-tm-3-testi_client_name h2{font-size: 18px;
+   font-weight: 700;margin-bottom:18px;}
+   .aefe-tm-3-testi_client_name h3{font-size: 16px;
+   font-weight: 400;}  
+   .aefe-tm-3-testimonial-slider .owl-dots .owl-dot {width:30px;height:2px;display:inline-block;background:#fff;margin-right:6px;}
+   
+   .aefe-tm-3-testimonial-slider .owl-dots .owl-dot.active,.aefe-tm-3-testimonial-slider .owl-dots .owl-dot:hover{background: #7f8ce3; /* Old browsers */
+   background: -moz-linear-gradient(left, #7f8ce3 0%, #55bde3 41%, #32dee1 81%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(left, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to right, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f8ce3', endColorstr='#32dee1',GradientType=1 ); /* IE6-9 */}
