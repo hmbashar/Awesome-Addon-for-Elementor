@@ -31,6 +31,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 - Team Member
 - Skill
 - Testimonial
+- Icon Box
 - More Coming soon
 
 
@@ -62,6 +63,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 - [Skills Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-2.jpg?raw=true)
 - [Testimonial One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-1.jpg?raw=true)
 - [Testimonial Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-2.jpg?raw=true)
+- [Icon Box](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/icon-box.jpg?raw=true)
 
 
 ### Changelog 

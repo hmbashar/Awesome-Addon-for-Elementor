@@ -216,16 +216,18 @@ final class Plugin {
 	 */
 	public function register_widgets( $widgets_manager ) {
 
-		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/pricing-table.php' ); // add pricing table file
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/pricing-table/pricing-table.php' ); // add pricing table file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/teammember/team-member.php' ); // Team Member file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/skills/skills.php' ); // Skills file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/testimonial/testimonial.php' ); // Testimonial file
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/icon-box/icon-box.php' ); // Testimonial file
 		
 
 		$widgets_manager->register( new \AEFE_ELEMENTOR\PricingTable\AEFE_Pricing_Table() ); // call pricing table class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\TeamMember\AEFE_TeamMember() ); // Team Member class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFESkills\AEFE_Skills() ); // Team Member class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFETestimonial\AEFE_Testimonial() ); // Testimonial class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFEIconBox\AEFE_IconBox() ); // Icon Box class
 		
 
 	}
