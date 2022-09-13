@@ -20,6 +20,8 @@ You're welcome to contribute to the plugin on the [Github](https://github.com/hm
 
 * [Pricing Table](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-1.jpg?raw=true)
 * [Team Member](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-4.jpg?raw=true)
+* [Skills](#)
+* [Testimonial](#)
 * More Coming soon
 
 == Frequently Asked Questions ==

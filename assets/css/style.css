@@ -112,10 +112,10 @@ color: #cccccc;}
 
 
 /*---------------------------------------
-    Our Services
+    Our Skill Style one
 -----------------------------------------*/
 
-.romana_single_our_service{
+.aefe_single_skills{
    border: 1px solid transparent;
    padding: 28px 20px 27px 18px;
    margin-top: 12px;
@@ -123,29 +123,29 @@ color: #cccccc;}
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     transition-duration: 0.5s;
    }
-   .romana_single_our_service:hover{
+.aefe_single_skills:hover{
           border: 1px solid #c8c8c8;
       }
-   .romana_single_our_service:hover .our_service_icon{
+.aefe_single_skills:hover .aefe_skill_icon{
       background: black;
    }
-   .our_service_icon {
+.aefe_skill_icon {
             background: #f7a914;           
             float: left;
             padding: 5px 6px;
           transition-duration:0.5s;
           padding-bottom: 1px;
    }
-   .romana_single_our_service .our_service_icon img {
+.aefe_single_skills .aefe_skill_icon img {
       border: 1px dashed #fff;
       padding: 15px;
    
    }
           
-   .romana_single_our_service .our_service_title {
+.aefe_single_skills .aefe_skill_title {
       padding-left: 108px;
    }
-   .romana_single_our_service .our_service_title h3 {
+.aefe_single_skills .aefe_skill_title h3 {
      font-size: 20px;
      margin-bottom: 5px;
      padding-top: 10px;
@@ -154,12 +154,12 @@ color: #cccccc;}
    }
    
    
-   .romana_single_our_service .skill_rate {
+.aefe_single_skills .aefe_skill_rate {
      font-size: 16px;
     color: #f7a914;
    }
    
-   .romana_single_our_service .barfiller {
+.aefe_single_skills .aefe_skst_barfiller {
      background: #d3d3d3 none repeat scroll 0 0;
      border: medium none;
      border-radius: 10px;
@@ -170,18 +170,239 @@ color: #cccccc;}
      width: 100%;
      margin-top: -3px;
    }
-   .barfiller .fill {
+.aefe_skst_barfiller .fill {
           border-radius: 6px;
       }
-   .barfiller .tip::after {
+.aefe_skst_barfiller .tip::after {
           display: none;
       }
-   .barfiller .tip {
-      background: transparent none repeat scroll 0 0;  
+.aefe_skst_barfiller .tip {
+      background: transparent none repeat scroll 0 0;
       font-size: 15px;
       margin-top: -38px;
+      margin-left: 130px !important;
+      transition: left 3s ease-in-out 0s;
    }
-   .our_service_text {
+.aefe_skill_text {
           padding-top: 20px;
       }
-   
+.fill.aefe-our-service-skill{background: rgb(245, 171, 53) none repeat scroll 0% 0%;
+   width: 158px;
+   transition: width 3s ease-in-out 0s;}
+
+
+
+/*---------------------------------------
+    Our Skill Style Two
+-----------------------------------------*/
+
+.aefe-skill-bar-style-two {
+	margin-top: 50px;
+}
+.aefe-skill-bar-style-two h4 {
+	margin-bottom: 30px;
+}
+.aefe_single_skill_st_bar_item {
+	margin: 20px 0;
+}
+
+.aefe_st_skill p {
+	margin-bottom: 10px;
+}
+.aefe_sk_st_progressbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #eeeeee;
+}
+.aefe_skst_bar {
+	position:absolute;
+	width: 0px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #494949;
+	overflow:hidden;
+}
+.aefe_skill_bar_st_label {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-color: green;
+	line-height: 34px;
+	text-align: center;
+	color: #ffffff;
+	-webkit-transform: translateX(-15px);
+	    -ms-transform: translateX(-15px);
+	        transform: translateX(-15px);
+}
+.aefe_skill_bar_st_label:before {
+	position: absolute;
+	content: '';
+	bottom: -10px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 10px;
+	height: 10px;
+	border-top: 6px solid green;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+}
+
+
+
+/*---------------------------------------
+    Some Review Area
+-----------------------------------------*/
+.aefe-some-review-heading{margin-top: 50px;}
+.aefe-some-review-title{width: 70%;margin: 0 auto;text-align: center;margin-bottom: 50px;}
+.aefe-some-review-title h2{color: #222222;font-family: roboto;font-size: 24px;font-weight: 500;margin-bottom: 30px;text-transform: uppercase;margin-top: 0;}
+.aefe-some-review-title p{color: #777777;font-size: 16px;font-weight: 400;font-family: roboto;margin-bottom: 5px;}
+.aefe-single-some-review{box-shadow: 0px 11px 39px -20px #a49b9b;margin-top: 70px;margin-left: 5px;background-color: #fff;position: relative;margin-bottom: 40px;}
+.aefe-single-some-review-img{margin-bottom: 30px;background-image: url(../img/review-clients-img-bg.png);background-repeat: no-repeat;background-position: center;min-width: 120px;min-height: 116px;padding-top: 6px;padding-left: 3px;position: absolute;top: -65px;left: 0;right: 0;}
+.aefe-single-some-review-img img{width: 100px !important;height: 100px;margin: 0 auto;padding-top: 5px;border-radius: 500px;}
+.aefe-single-some-review-title{text-align: center;padding-top: 80px;}
+.aefe-single-some-review-title h2 {margin-bottom: 14px;}
+.aefe-single-some-review-title h2 a{color: #222222;font-size: 16px;font-family: roboto;font-weight: 500;text-transform: uppercase;}
+.aefe-single-some-review-title h4{color: #666666;font-size: 14px;font-family: roboto;font-weight: 400;margin-bottom: 5px;}
+.aefe-single-some-review-content{margin: 40px;}
+.aefe-single-some-review-content p{color: #777777;font-size: 16px;font-family: roboto;font-weight: 400;line-height: 30px;text-align: center;}
+.aefe-single-some-review-social{text-align: center;padding-bottom: 50px;}
+.aefe-single-some-review-social a{border-right: 1px solid #ccc;}
+.aefe-single-some-review-social a i{color: #666666;font-size: 14px;padding-left: 16px;padding-right: 16px;}
+.aefe-single-some-review-social a:last-child{border-right:0}
+.aefe-single-some-review:hover {background-color:#03bee4;transition:0.5s;box-shadow: 0px 11px 39px -20px #03bee4; }
+.aefe-single-some-review:hover .aefe-single-some-review-title h2 a,.aefe-single-some-review:hover .aefe-single-some-review-title h4,.aefe-single-some-review:hover .aefe-single-some-review-content p,.aefe-single-some-review:hover .aefe-single-some-review-social a i {color:#fff;}
+.aefe-single-some-review:hover .aefe-single-some-review-social a{border-right-color: #fff;}
+
+
+/*---------------------------------------
+    Testimonial Area
+-----------------------------------------*/
+
+
+.aefe-tms-testimonial-bottom {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.aefe-tms-single-testimonial {
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px -1px 10px -3px #666;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  width: 80%;
+  border-radius: 6px;
+  position: relative;
+  z-index: 999;
+}
+.aefe-tms-single-testimonial:before{content:'';display: block;width:100px;height: 340px;box-shadow: -4px 1px 13px -10px #666;position: absolute;top:42px;left:-93px;z-index: -999;}
+.aefe-tms-single-testimonial:after{content:'';display: block;width:100px;height: 340px;box-shadow: 4px 1px 13px -10px #666;position: absolute;top:42px;right:-93px;z-index: -999;}
+.aefe-tms-testimonial-quote{text-align: left;position: absolute;top: -50px;left: 0;right: 0;}
+.aefe-tms-testimonial-quote i{font-size: 58px;color: #4b278f;}
+.aefe-tms-clients-image {margin: 0 auto;position: absolute;top: -48px;left: 0;right: 0;}
+.aefe-tms-clients-image img{width: 100px !important;height: 100px;margin: 0 auto;border-radius: 500px;}
+
+.aefe-tms-testimonial-client-name {padding-top: 90px;}
+.aefe-tms-testimonial-client-name h2{color: #444444;font-size: 18px;text-transform: uppercase;font-weight: 600;font-family: poppins;margin-bottom: 15px;}
+.aefe-tms-testimonial-client-name h3{font-size: 18px;font-family: poppins;font-weight: 500;color: #cccccc;text-transform: uppercase;margin-bottom: 45px;}
+
+.aefe-tms-testimonial-message {width: 71%;margin: 0 auto;}
+.aefe-tms-testimonial-message p{font-family: roboto;font-weight: 400;color: #737373;font-size: 16px;line-height: 30px;}
+
+.aefe-tms-testimonial-rating {padding-bottom: 60px;margin-top: 40px;}
+.aefe-tms-testimonial-rating i{color: #feb518;margin-right: 9px;}
+.aefe-tms-testimonial-content-area .owl-dots{text-align: center;}
+.aefe-tms-testimonial-content-area .owl-dot{height: 10px;
+width: 10px;
+background-color: #cccccc;
+display: inline-block;
+border-radius: 100px;
+margin-right: 6px;}
+.aefe-tms-testimonial-content-area .owl-dot.active{background-color:#4b278f;}
+
+
+
+.aefe-tms-testimonial-content-area .owl-nav{position: absolute;top: 245px;left: -15%;margin: 0 auto;right: -15%;}
+.aefe-tms-testimonial-content-area .owl-nav .owl-prev{float: left;}
+.aefe-tms-testimonial-content-area .owl-nav .owl-prev i{font-size: 30px;
+color: #cccccc;}
+.aefe-tms-testimonial-content-area .owl-nav .owl-next{float: right;}
+.aefe-tms-testimonial-content-area  .owl-nav .owl-next i{font-size: 30px;
+color: #cccccc;}
+.aefe-tms-testimonial-content-area  .owl-nav .owl-prev i:hover{color:#4b278f;}
+.aefe-tms-testimonial-content-area  .owl-nav .owl-next i:hover{color:#4b278f;}
+
+
+
+/*=======================================
+    Team Area  Style Three     
+=========================================*/
+.aefe-tm-sth-single-team-member {border: 1px solid #f6f6f6;
+position: relative;
+overflow: hidden;
+}
+.aefe-tm-sth-team-member-header { width:100%;height:157px;
+	background: #7f8ce3; /* Old browsers */
+background: -moz-linear-gradient(left, #7f8ce3 0%, #55bde3 41%, #32dee1 81%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f8ce3', endColorstr='#32dee1',GradientType=1 ); /* IE6-9 */
+}
+
+.aefe-tm-sth-team-member-picture img{width: 167px !important;
+height: 167px;
+margin: 0 auto;
+position: absolute;
+top: 66px;
+left: 0;
+right: 0;
+border: 1px solid #cfcfcf;
+border-radius: 500px;}
+
+.aefe-tm-sth-team-member-name {margin-top: 110px;
+text-align: center;}
+.aefe-tm-sth-team-member-name h2{color: #333333;
+font-weight: 700;
+font-family: Montserrat;
+font-size: 16px;
+margin-bottom: 16px;}
+.aefe-tm-sth-team-member-name h3{color: #666666;
+font-size: 16px;
+font-family: Montserrat;
+font-weight: 300;}
+.aefe-tm-sth-team-about p {margin-left: 35px;
+margin-right: 35px;
+text-align: center;
+color: #444444;
+font-family: roboto;
+font-weight: 400;}
+
+.aefe-tm-sth-team-socials-profile {text-align: center;
+margin-top: 29px;
+margin-bottom: 29px;visibility: hidden;transition:1s ease-out;}
+
+.aefe-tm-sth-single-team-member:hover .aefe-tm-sth-team-socials-profile {visibility: visible;transition:1s;}
+.aefe-tm-sth-single-team-member:hover {box-shadow: -1px 0px 17px -1px #f5eeee;
+margin-bottom: 10px;transition:1s;}
+.aefe-tm-sth-single-team-member:hover:after{content:'';display:block;height:3px;width: 100%;
+margin-top: 0px;
+background: #7d8fe3; /* Old browsers */
+background: -moz-linear-gradient(left, #7d8fe3 1%, #34dce1 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #7d8fe3 1%,#34dce1 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #7d8fe3 1%,#34dce1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d8fe3', endColorstr='#34dce1',GradientType=1 ); /* IE6-9 */}
+
+.aefe-tm-sth-team-socials-profile a i{font-size: 16px;
+color: #fff;
+padding: 5px 7px;
+background: #cccccc;margin-right:12px;transition:0.5s ease-out;}
+.aefe-tm-sth-team-socials-profile a i:hover{background:#7f8ce3;transition:0.5s;}

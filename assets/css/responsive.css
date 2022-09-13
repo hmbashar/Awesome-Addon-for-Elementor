@@ -9,6 +9,21 @@
     padding-bottom: 25px;
   }
 
+  .aefe-some-review-heading {
+    margin-top: 50px;
+}
+.aefe-some-review-title h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.aefe-some-review-title p {
+    font-size: 15px;
+    line-height: 25px;
+}
+.aefe-single-some-review-title {
+    padding-top: 60px;
+}
+
 
 }
 

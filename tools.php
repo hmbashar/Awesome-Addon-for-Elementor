@@ -39,17 +39,19 @@ add_action( 'plugins_loaded', 'aefe_plugin_general_init' );
  * Enqueue scripts and styles.
  */
 function aefe_stylesheet_enque() {    
-    wp_enqueue_style( 'owlcarousel',  AEFE_URL . "/assets/css/owl.carousel.min.css");
-    wp_enqueue_style( 'barfilter',  AEFE_URL . "/assets/css/barfilter.css");
+    wp_enqueue_style( 'owlcarousel',  AEFE_URL . "assets/css/owl.carousel.min.css");
+    wp_enqueue_style( 'barfilter',  AEFE_URL . "assets/css/barfilter.css");
 	//Awesome Elements plugin main stylesheet
-	wp_enqueue_style( 'aefe_main_stylesheet',  AEFE_URL . "/assets/css/style.css");
+	wp_enqueue_style( 'aefe_main_stylesheet',  AEFE_URL . "assets/css/style.css");
 	//Awesome Elements Plugin Responsive Stylesheet
-    wp_enqueue_style( 'aefe_responsive_stylesheet',  AEFE_URL . "/assets/css/responsive.css", array('aefe_main_stylesheet'));
+    wp_enqueue_style( 'aefe_responsive_stylesheet',  AEFE_URL . "assets/css/responsive.css", array('aefe_main_stylesheet'));
 
 	//OWL Carousel jQuery
-	wp_enqueue_script( 'owlcarousel', AEFE_URL . "/assets/js/owl.carousel.min.js", array( 'jquery' ), false, true );
-	wp_enqueue_script( 'barfiller', AEFE_URL . "/assets/js/jquery.barfiller.js", array( 'jquery' ), false, true );
-	wp_enqueue_script( 'aefe_main_jquery', AEFE_URL . "/assets/js/main.js", array( 'jquery' ), false, true );
+	wp_enqueue_script( 'owlcarousel', AEFE_URL . "assets/js/owl.carousel.min.js", array( 'jquery' ), false, true );	
+	wp_enqueue_script( 'aefe_main_jquery', AEFE_URL . "assets/js/main.js", array( 'jquery' ), false, true );
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
 

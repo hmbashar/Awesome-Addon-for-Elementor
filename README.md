@@ -29,6 +29,8 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 
 - Pricing Table
 - Team Member
+- Skill
+- Testimonial
 - More Coming soon
 
 
@@ -53,8 +55,13 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 - [Pricing Table](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-1.jpg?raw=true)
 - [Team Member Single](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-2.jpg?raw=true)
 - [Team Member Slider](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-3.jpg?raw=true)
+- [Team Member Slider Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/TeamMember-3.jpg?raw=true)
 - [Team Member Single and slider](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-4.jpg?raw=true)
 - [Pricing Table Style two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-5.jpg?raw=true)
+- [Skills One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-1.jpg?raw=true)
+- [Skills Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-2.jpg?raw=true)
+- [Testimonial One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-1.jpg?raw=true)
+- [Testimonial Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-2.jpg?raw=true)
 
 
 ### Changelog 
