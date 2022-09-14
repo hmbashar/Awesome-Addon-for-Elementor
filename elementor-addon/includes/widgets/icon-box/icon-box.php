@@ -103,17 +103,83 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'aefe-pt-template-style',
+			'aefe-icon-box-section',
 			[
-				'label' => esc_html__( 'Style', 'aefe' ),
+				'label' => esc_html__( 'Icon BOx', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
+		// Icon
+		$this->add_control(
+			'aefe_icon_box_icon',
+			[
+				'label' => esc_html__( 'Icon', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				//'skin' => 'inline',				
+				'default' => [
+					'value' => 'fas fa-code',
+					'library' => 'fa-solid',
+				],
+			]
+		);
 
-	
+		// Icon Box Title
+		$this->add_control(
+			'aefe_icon_box_title', [
+				'label' => esc_html__( 'Title', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Web Development' , AEFE_TEXTDOMAIN ),
+				'label_block' => true,
+				'dynamic' => [
+					'active' => true
+				]
+			]
+		);
+		// Icon Box Content
+		$this->add_control(
+			'aefe_icon_box_content', [
+				'label' => esc_html__( 'Content', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,				
+				'show_label' => false,
+				'dynamic' => [
+					'active' => true
+				]
+			]
+		);
+		// Background Number
+		$this->add_control(
+			'aefe_icon_box_number', [
+				'label' => esc_html__( 'Number', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::NUMBER,	
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-de-itm .aefe-icon-box-design-item:after' => 'content:"{{VALUE}}" ',
+				],
+			]
+		);
+
+		$this->end_controls_section(); // End of the content section
 
 
-		$this->end_controls_section();
+		//Icon Box Style
+		$this->start_controls_section(
+			'aefe_icon_box_style_section',
+			[
+				'label' => esc_html__( 'Style', AEFE_TEXTDOMAIN ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+		
+
+		// Icon Box Style
+		$this->add_control(
+			'aefe_icon_box_style', [
+				'label' => esc_html__( 'This Features will be available in the next update', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::HEADING,			
+				
+			]
+		);
+
+
 
 
 	}

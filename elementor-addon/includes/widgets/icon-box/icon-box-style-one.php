@@ -4,14 +4,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+$settings = $this->get_settings_for_display();
 ?>
 
 <div class="aefe-icon-box-de-itm">
     <div class="aefe-icon-box-design-item">
         <div class="aefe-icon-box-design-icon">
-            <i class="fa fa-diamond" aria-hidden="true"></i>
+            <?php \Elementor\Icons_Manager::render_icon( $settings['aefe_icon_box_icon'], [ 'aria-hidden' => 'true' ] ); ?>
         </div>
-        <h4>Start Sketching</h4>
-        <p>When I'm asked to create a look and feel for a project, the first thing I do is to come up with a top-level framework that solves all the design problems. The framework is the UI that surrounds the content.</p>
+        <?php if(!empty($settings['aefe_icon_box_title'])) : ?>
+            <h4><?php echo esc_html($settings['aefe_icon_box_title']); ?></h4>
+        <?php endif; ?>
+
+        <?php if(!empty($settings['aefe_icon_box_content'])) : ?>
+            <p><?php echo esc_html($settings['aefe_icon_box_content']); ?></p>
+        <?php endif; ?>
     </div>
 </div><!-- design-item end -->

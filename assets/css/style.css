@@ -468,11 +468,9 @@ background: #cccccc;margin-right:12px;transition:0.5s ease-out;}
    }
    .aefe-icon-box-de-itm .aefe-icon-box-design-item:after {
       position: absolute;
-      content:'';
+      content:'01';
       bottom: -30px;
-      right: -5px;
-      counter-increment: section;
-      content: "0"counter(section);
+      right: -5px;    
       color: #ffffff;
       font-size: 110px;
       font-family: var(--heading-font-bold);
