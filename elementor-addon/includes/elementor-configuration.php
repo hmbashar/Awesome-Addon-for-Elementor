@@ -221,7 +221,7 @@ final class Plugin {
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/skills/skills.php' ); // Skills file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/testimonial/testimonial.php' ); // Testimonial file
 		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/icon-box/icon-box.php' ); // Icon Box file
-		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/faq/faq.php' ); // FAQ file
+		require_once( AEFE_PATH . '/elementor-addon/includes/widgets/accordion/accordion.php' ); // Accordion file
 		
 
 		$widgets_manager->register( new \AEFE_ELEMENTOR\PricingTable\AEFE_Pricing_Table() ); // call pricing table class
@@ -229,7 +229,7 @@ final class Plugin {
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFESkills\AEFE_Skills() ); // Team Member class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFETestimonial\AEFE_Testimonial() ); // Testimonial class
 		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFEIconBox\AEFE_IconBox() ); // Icon Box class
-		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFEFAQ\AEFE_FAQ() ); // FAQ class
+		$widgets_manager->register( new \AEFE_ELEMENTOR\AEFEAccordion\AEFE_Accordion() ); // FAQ class
 		
 
 	}

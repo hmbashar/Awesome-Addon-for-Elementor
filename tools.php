@@ -20,6 +20,9 @@ define('AEFE_URL', plugin_dir_url( __FILE__ ));
 define('AEFE_PATH', plugin_dir_path(__FILE__));
 define('AEFE_URI', plugin_dir_url( dirname( __FILE__ ) ));
 
+// Define Text Domain
+define('AEFE_TEXTDOMAIN','AEFE');
+
 
 
 function aefe_plugin_general_init() {
@@ -57,8 +60,7 @@ add_action( 'wp_enqueue_scripts', 'aefe_stylesheet_enque' );
 
 
 
-
-
+//General Functions
 function aefe_general_function() {
 	add_image_size( 'our-work', 400, 300, true );
 }

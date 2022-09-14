@@ -586,31 +586,32 @@ background: #cccccc;margin-right:12px;transition:0.5s ease-out;}
    font-family: lato;
    font-weight: 400;}
    .aefe-faq-1-accordion_hearder h2 span {font-weight:700;}
-   .aefe-faq-1-accordion_content{padding: 15px;display:none;background: #fff;}
+   .aefe-faq-1-accordion_content{padding: 15px;display:none;background: #fff;color:#666666;}
    
    .aefe-faq-1-accordion_content p{margin: 0 0 15px;
    padding: 0;text-align: justify;}
+
    .aefe-faq-1-accordion_content p:last-child{margin-bottom:0px}
    span.aefe-faq-1-accordion_icon{color: #666;   
    float: right;
    font-size: 25px;
    line-height: 25px;
    position: relative;}
-   span.aefe-faq-1-accordion_icon i.fa{display: block;
+   span.aefe-faq-1-accordion_icon i{display: block;
    font-size: 14px;
    color: #666666;
    border: 1px solid #cccccc;
    padding: 5px 6px;}
   
-   span.aefe-faq-1-accordion_icon i.fa.fa-minus{left: 0;
+   span.aefe-faq-1-accordion_icon .aefe-acc1-open i{left: 0;
    opacity: 0;
    position: absolute;
    top: 0;}
    .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active{background-color: #fff;}
    .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active h2{color:#444444}
-  .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active span.aefe-faq-1-accordion_icon i.fa.fa-plus{opacity: 0;}
-   .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active span.aefe-faq-1-accordion_icon i.fa.fa-minus{opacity: 1;color:#fff;background-color: #e5212a;
+  .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active span.aefe-faq-1-accordion_icon .aefe-acc1-close i{opacity: 0;}
+   .aefe-faq-1-accordion_hearder.aefe-faq-1-accordion_active span.aefe-faq-1-accordion_icon .aefe-acc1-open i{opacity: 1;color:#fff;background-color: #e5212a;
    border-color: #e5212a;}
    .aefe-faq-1-active_single_accordion{border-left: 3px solid #ed174b;}
-   .aefe-faq-1-single_accordion.aefe-faq-1-active_single_accordion:before{border-color:#c8c8c8;left: -67px;}
+   .aefe-faq-1-single_accordion.aefe-faq-1-active_single_accordion:before{border-color:#c8c8c8 !important;left: -67px;}
    .aefe-faq-1-single_accordion:before{width:3px;height:100%;border-left: 3px solid #ed174b;content:'';position: absolute;top: 0;left: -64px;height: calc(100% + 15px);}
