@@ -184,7 +184,7 @@ class AEFE_Testimonial extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 			//load render view to show widget output on frontend/website.
-			include 'testimonial-style-three.php';
+			include 'testimonial-style-one.php';
 
 	?>
           

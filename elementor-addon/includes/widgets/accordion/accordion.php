@@ -63,7 +63,7 @@ class AEFE_Accordion extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-bullet-list';
+		return 'eicon-toggle';
 	}
 
 	/**

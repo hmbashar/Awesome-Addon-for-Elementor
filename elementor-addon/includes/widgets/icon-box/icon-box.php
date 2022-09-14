@@ -37,7 +37,7 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'Icon Box', 'aefe' );
+		return esc_html__( 'Icon Box', AEFE_TEXTDOMAIN );
 	}
 
 	/**
@@ -50,7 +50,7 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-bullet-list';
+		return 'eicon-icon-box';
 	}
 
 	/**
@@ -89,7 +89,7 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'table', 'pricing', 'pricing table', 'package' ];
+		return [ 'icon', 'icon box', 'service', 'step' ];
 	}
 
 	/**
