@@ -42,6 +42,15 @@ Both Page
 	},3000);
 	});
 
+	// progress bar
+	$(".aefe_skill_barfiller").each(function(){
+	$(this).find(".aefe_skill_fill.aefe-skills-skill").animate({
+		"width": $(this).attr("data-perc")
+	},1000);
+	});
+
+
+
 	$('.aefe-some-review-content-slide').owlCarousel({
 		dots: false,
 		items: 4,

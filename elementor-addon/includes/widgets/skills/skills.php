@@ -38,7 +38,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'Skills', 'aefe' );
+		return esc_html__( 'Skills', AEFE_TEXTDOMAIN );
 	}
 
 	/**
@@ -51,7 +51,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-person';
+		return 'eicon-code';
 	}
 
 	/**
@@ -90,7 +90,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'services', 'our services', 'skill' ];
+		return [ 'services', 'our services', 'skill', 'profession' ];
 	}
 
 	/**
@@ -107,19 +107,31 @@ class AEFE_Skills extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'aefe-skills_section',
 			[
-				'label' => esc_html__( 'Content', 'aefe' ),
+				'label' => esc_html__( 'Content', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,				
 			]
 		);
+		$this->add_control(
+			'aefe_skills_template_style',
+			[
+				'label' => esc_html__( 'Style', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'options' => [					
+					'aefe_skill_style_one' => esc_html__( 'Style One', AEFE_TEXTDOMAIN ),					
+				],
+				'default' => 'aefe_skill_style_one',
 
+			]
+		);
 
 		// Title
 		$this->add_control(
 			'aefe-skills-title',
 			[
-				'label' => esc_html__( 'Title', 'AEFE' ),
+				'label' => esc_html__( 'Title', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Title Name', 'AEFE' ),
+				'placeholder' => esc_html__( 'Title Name', AEFE_TEXTDOMAIN ),
+				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
 				],
@@ -130,12 +142,24 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-skills-subtitle',
 			[
-				'label' => esc_html__( 'Sub Title', 'AEFE' ),
+				'label' => esc_html__( 'Sub Title', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Subtitle', 'AEFE' ),
+				'placeholder' => esc_html__( 'Subtitle', AEFE_TEXTDOMAIN ),
+				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
 				],
+			]
+		);
+		
+		// Percentage
+		$this->add_control(
+			'aefe-skills-percentage',
+			[
+				'label' => esc_html__( 'Level', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::NUMBER,				
+				'placeholder' => esc_html__( 'How much percentage?', AEFE_TEXTDOMAIN ),	
+				'label_block' => true,			
 			]
 		);
 
@@ -143,7 +167,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
         $this->add_control(
 			'aefe-skills-logo',
 			[
-				'label' => esc_html__( 'Logo', 'aefe' ),
+				'label' => esc_html__( 'Logo', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -158,7 +182,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
         $this->add_control(
 			'aefe-skills-content',
 			[
-				'label' => esc_html__( 'Content', 'aefe' ),
+				'label' => esc_html__( 'Content', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'dynamic' => [
 					'active' => true,
@@ -168,6 +192,28 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 		
 
 		$this->end_controls_section();
+
+		//Skill Style
+		$this->start_controls_section(
+			'aefe_skill_1_style_section',
+			[
+				'label' => esc_html__( 'Style', AEFE_TEXTDOMAIN ),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+		
+
+		// Skill Style
+		$this->add_control(
+			'aefe_skill_1_style', [
+				'label' => esc_html__( 'This Features will be available in the next update', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::HEADING,			
+				
+			]
+		);
+
+
+
 
 	}
 
@@ -184,21 +230,15 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 			//load render view to show widget output on frontend/website.
-			//include 'skill-style-one.php';
+
+			if(!empty($settings['aefe_skills_template_style']) && 'aefe_skill_style_one' == $settings['aefe_skills_template_style']) {
+				include 'skill-style-one.php';
+			}
+			
+			//include 'skill-style-two.php';
 
 	?>
-	<!-- Skill bar Style Two Start -->
-	<div class="aefe-skill-bar-style-two">		
-		<div class="aefe_single_skill_st_bar_item">
-			<div class="aefe_st_skill-bar">
-				<p>HTML &amp; CSS</p>
-				<div class="aefe_sk_st_progressbar" data-perc="85%">
-					<div class="aefe_skst_bar"></div>
-					<span class="aefe_skill_bar_st_label">85</span>
-				</div>
-			</div>
-		</div>
-	</div><!--/ Skill bar Style Two Start -->
+
 
 <?php	
 

@@ -139,7 +139,8 @@ color: #cccccc;}
 .aefe_single_skills .aefe_skill_icon img {
       border: 1px dashed #fff;
       padding: 15px;
-   
+   max-width: 90px;
+   max-height: 90px;
    }
           
 .aefe_single_skills .aefe_skill_title {
@@ -159,7 +160,7 @@ color: #cccccc;}
     color: #f7a914;
    }
    
-.aefe_single_skills .aefe_skst_barfiller {
+.aefe_single_skills .aefe_skill_barfiller {
      background: #d3d3d3 none repeat scroll 0 0;
      border: medium none;
      border-radius: 10px;
@@ -170,24 +171,22 @@ color: #cccccc;}
      width: 100%;
      margin-top: -3px;
    }
-.aefe_skst_barfiller .fill {
+.aefe_skill_barfiller .aefe_skill_fill {
           border-radius: 6px;
       }
-.aefe_skst_barfiller .tip::after {
-          display: none;
-      }
-.aefe_skst_barfiller .tip {
+
+.aefe_skill_barfiller .aefe_skill_tip {
       background: transparent none repeat scroll 0 0;
       font-size: 15px;
       margin-top: -38px;
-      margin-left: 130px !important;
+      margin-left: 90% !important;
       transition: left 3s ease-in-out 0s;
    }
 .aefe_skill_text {
           padding-top: 20px;
       }
-.fill.aefe-our-service-skill{background: rgb(245, 171, 53) none repeat scroll 0% 0%;
-   width: 158px;
+.aefe_skill_fill.aefe-skills-skill{background: rgb(245, 171, 53) none repeat scroll 0% 0%;
+   width: 0;
    transition: width 3s ease-in-out 0s;}
 
 

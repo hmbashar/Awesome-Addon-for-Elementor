@@ -1,6 +1,6 @@
 
 
-.barfiller {
+.aefe_skill_barfiller {
     width:100%;
     height:12px;
     background:#fcfcfc;
@@ -11,7 +11,7 @@
     -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5); 
 }
 
-.barfiller .fill {
+.aefe_skill_barfiller .aefe_skill_fill {
     display:block;
     position:relative;
     width:0px;
@@ -20,11 +20,8 @@
     z-index:1;
 }
 
-.barfiller .tipWrap {
-   
-}
 
-.barfiller .tip {
+.aefe_skill_barfiller .aefe_skill_tip {
     margin-top:-30px;
     padding:2px 4px;
     font-size:11px;
@@ -35,11 +32,11 @@
     background: #333;
 } 
 
-.barfiller .tip:after {
+.aefe_skill_barfiller .aefe_skill_tip:after {
     border:solid;
     border-color:rgba(0,0,0,.8) transparent;
     border-width:6px 6px 0 6px;
-    content:"";
+    content:'';
     display:block;
     position:absolute;
     left:9px;
