@@ -118,6 +118,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'options' => [					
 					'aefe_skill_style_one' => esc_html__( 'Style One', AEFE_TEXTDOMAIN ),					
+					'aefe_skill_style_two' => esc_html__( 'Style Two', AEFE_TEXTDOMAIN ),					
 				],
 				'default' => 'aefe_skill_style_one',
 
@@ -149,6 +150,9 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 				'dynamic' => [
 					'active' => true,
 				],
+				'condition' => [
+					'aefe_skills_template_style' => 'aefe_skill_style_one',
+				],
 			]
 		);
 		
@@ -175,6 +179,9 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 				'dynamic' => [
 					'active' => true,
 				],
+				'condition' => [
+					'aefe_skills_template_style' => 'aefe_skill_style_one',
+				],
 			]
 		);
 
@@ -186,6 +193,9 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'dynamic' => [
 					'active' => true,
+				],
+				'condition' => [
+					'aefe_skills_template_style' => 'aefe_skill_style_one',
 				],
 			]
 		);
@@ -233,9 +243,11 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 
 			if(!empty($settings['aefe_skills_template_style']) && 'aefe_skill_style_one' == $settings['aefe_skills_template_style']) {
 				include 'skill-style-one.php';
+			}elseif(!empty($settings['aefe_skills_template_style']) && 'aefe_skill_style_two' == $settings['aefe_skills_template_style']) {
+				include 'skill-style-two.php';
 			}
 			
-			//include 'skill-style-two.php';
+		
 
 	?>
 
