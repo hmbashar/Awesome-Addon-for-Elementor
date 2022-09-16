@@ -37,7 +37,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'AW Team Member', 'aefe' );
+		return esc_html__( 'Team Member', AEFE_TEXTDOMAIN );
 	}
 
 	/**
@@ -105,19 +105,19 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'aefe-tm-single-or-repeater-tab',
 			[
-				'label' => esc_html__( 'Type', 'aefe' ),
+				'label' => esc_html__( 'Type', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 		$this->add_control(
 			'aefe-tm-repeater-single',
 			[
-				'label' => esc_html__( 'Type', 'aefe' ),
+				'label' => esc_html__( 'Type', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'single',
 				'options' => [
-					'single'  => esc_html__( 'Single', 'aefe' ),
-					'slider' => esc_html__( 'Slider', 'aefe' ),
+					'single'  => esc_html__( 'Single', AEFE_TEXTDOMAIN ),
+					'slider' => esc_html__( 'Slider', AEFE_TEXTDOMAIN ),
 				],
 			]
 		);
@@ -127,7 +127,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'tm_content_section',
 			[
-				'label' => esc_html__( 'Content', 'AEFE' ),
+				'label' => esc_html__( 'Content', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 'condition' => [
                     'aefe-tm-repeater-single' => 'single',
@@ -139,9 +139,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-tm-name',
 			[
-				'label' => esc_html__( 'Name', 'AEFE' ),
+				'label' => esc_html__( 'Name', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Member Name', 'AEFE' ),
+				'placeholder' => esc_html__( 'Member Name', AEFE_TEXTDOMAIN ),
 			]
 		);
 		
@@ -149,9 +149,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-tm-subtitle',
 			[
-				'label' => esc_html__( 'Sub Title', 'AEFE' ),
+				'label' => esc_html__( 'Sub Title', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Subtitle', 'AEFE' ),
+				'placeholder' => esc_html__( 'Subtitle', AEFE_TEXTDOMAIN ),
 			]
 		);
 
@@ -159,7 +159,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         $this->add_control(
 			'aefe-tm-member-picture',
 			[
-				'label' => esc_html__( 'Member Picture', 'aefe' ),
+				'label' => esc_html__( 'Member Picture', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -173,7 +173,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'tm_social_section',
 			[
-				'label' => esc_html__( 'Social Profile', 'AEFE' ),
+				'label' => esc_html__( 'Social Profile', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 'condition' => [
                     'aefe-tm-repeater-single' => 'single',
@@ -185,9 +185,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-tm-facebook',
 			[
-				'label' => esc_html__( 'Facebook URL', 'AEFE' ),
+				'label' => esc_html__( 'Facebook URL', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::URL,				
-				'placeholder' => esc_html__( 'https://fb.com/hmbashar', 'AEFE' ),
+				'placeholder' => esc_html__( 'https://fb.com/hmbashar', AEFE_TEXTDOMAIN ),
                 'label_block' => true,
 			]
 		);
@@ -196,9 +196,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-tm-twitter',
 			[
-				'label' => esc_html__( 'Twitter URL', 'AEFE' ),
+				'label' => esc_html__( 'Twitter URL', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::URL,				
-				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', 'AEFE' ),
+				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', AEFE_TEXTDOMAIN ),
                 'label_block' => true,
 			]
 		);
@@ -211,7 +211,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'aefe-tm-slider-content_section',
 			[
-				'label' => esc_html__( 'Content', 'aefe' ),
+				'label' => esc_html__( 'Content', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 				'condition' => [
                     'aefe-tm-repeater-single' => 'slider',
@@ -225,9 +225,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'aefe-tm-name',
 			[
-				'label' => esc_html__( 'Name', 'AEFE' ),
+				'label' => esc_html__( 'Name', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Member Name', 'AEFE' ),
+				'placeholder' => esc_html__( 'Member Name', AEFE_TEXTDOMAIN ),
 				'default' => esc_html__( 'Member #1' , 'plugin-name' ),
 			]
 		);
@@ -236,9 +236,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$repeater->add_control(
 			'aefe-tm-subtitle',
 			[
-				'label' => esc_html__( 'Sub Title', 'AEFE' ),
+				'label' => esc_html__( 'Sub Title', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::TEXT,				
-				'placeholder' => esc_html__( 'Subtitle', 'AEFE' ),
+				'placeholder' => esc_html__( 'Subtitle', AEFE_TEXTDOMAIN ),
 			]
 		);
 
@@ -246,38 +246,59 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         $repeater->add_control(
 			'aefe-tm-member-picture',
 			[
-				'label' => esc_html__( 'Member Picture', 'aefe' ),
+				'label' => esc_html__( 'Member Picture', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
 			]
 		);
+
+        // Person BIO
+        $repeater->add_control(
+			'aefe-tm-member-bio',
+			[
+				'label' => esc_html__( 'Short Description', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::TEXTAREA,
+				'default' => esc_html__( 'Donec sollicitudin molestie malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam.', AEFE_TEXTDOMAIN ),
+			]
+		);
 		// facebook url 
 		$repeater->add_control(
 			'aefe-tm-facebook',
 			[
-				'label' => esc_html__( 'Facebook URL', 'AEFE' ),
+				'label' => esc_html__( 'Facebook URL', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::URL,				
-				'placeholder' => esc_html__( 'https://fb.com/hmbashar', 'AEFE' ),
+				'placeholder' => esc_html__( 'https://fb.com/hmbashar', AEFE_TEXTDOMAIN ),
                 'label_block' => true,
 			]
 		);
 		
-		// Twitter URL subtitle
+		// Twitter URL 
 		$repeater->add_control(
 			'aefe-tm-twitter',
 			[
-				'label' => esc_html__( 'Twitter URL', 'AEFE' ),
+				'label' => esc_html__( 'Twitter URL', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::URL,				
-				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', 'AEFE' ),
+				'placeholder' => esc_html__( 'https://twitter.com/hmbashar', AEFE_TEXTDOMAIN ),
+                'label_block' => true,
+			]
+		);
+		
+		// LinkedIn URL
+		$repeater->add_control(
+			'aefe-tm-linkedIn',
+			[
+				'label' => esc_html__( 'LinkedIn URL', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::URL,				
+				'placeholder' => esc_html__( 'https://www.linkedin.com/in/shaplahost/', AEFE_TEXTDOMAIN ),
                 'label_block' => true,
 			]
 		);
 		$repeater->add_control(
 			'list_color',
 			[
-				'label' => esc_html__( 'Color', 'aefe' ),
+				'label' => esc_html__( 'Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}'
@@ -288,7 +309,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe-tm-slider-list',
 			[
-				'label' => esc_html__( 'Slider List', 'aefe' ),
+				'label' => esc_html__( 'Slider List', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 			]
@@ -301,7 +322,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'aefe_tm_single_section_style',
 			[
-				'label' =>esc_html__( 'Single', 'aefe'),
+				'label' =>esc_html__( 'General', AEFE_TEXTDOMAIN),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,				
 			]
 		);
@@ -311,8 +332,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'aefe_tm_title_typography',
-				'label' =>esc_html__( 'Title Typography', 'aefe'),
+				'label' =>esc_html__( 'Title Typography', AEFE_TEXTDOMAIN),
 				'selector' => '{{WRAPPER}} .aefe-tm-single-team-member-name h2 a',
+				'selector' => '{{WRAPPER}} .aefe-tm-sth-team-member-name h2',
 			]
 		);
 
@@ -320,10 +342,11 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_tm_title_color',
 			[
-				'label' =>esc_html__( 'Title Color', 'aefe'),
+				'label' =>esc_html__( 'Title Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member-name h2 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-member-name h2' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -333,8 +356,9 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'aefe_tm_subtitle_typography',
-				'label' =>esc_html__( 'Subtitle Typography', 'aefe'),
+				'label' =>esc_html__( 'Subtitle Typography', AEFE_TEXTDOMAIN),
 				'selector' => '{{WRAPPER}} .aefe-tm-single-team-member-name h3',
+				'selector' => '{{WRAPPER}} .aefe-tm-sth-team-member-name h3',
 			]
 		);
 
@@ -342,10 +366,11 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_tm_subtitle_color',
 			[
-				'label' =>esc_html__( 'Subtitle Color', 'aefe'),
+				'label' =>esc_html__( 'Subtitle Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member-name h3' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-member-name h3' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -358,7 +383,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
         $this->start_controls_section(
 			'aefe_tm_social_section_style',
 			[
-				'label' =>esc_html__( 'Social Profile', 'aefe'),
+				'label' =>esc_html__( 'Social Profile', AEFE_TEXTDOMAIN),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -368,18 +393,19 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'aefe_tm_social_tab_normal',
 			[
-				'label' =>esc_html__( 'Normal', 'aefe'),
+				'label' =>esc_html__( 'Normal', AEFE_TEXTDOMAIN),
 			]
 		);
 
 		$this->add_control(
 			'aefe_tm_social_color',
 			[
-				'label' =>esc_html__( 'Color', 'aefe'),
+				'label' =>esc_html__( 'Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member-social a i' => 'color: {{VALUE}};border-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-socials-profile a i' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -387,11 +413,12 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_tm_social_bg_color',
 			[
-				'label' =>esc_html__( 'Background Color', 'aefe'),
+				'label' =>esc_html__( 'Background Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member-social a i' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-socials-profile a i' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -401,7 +428,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'aefe_tm_social_tab_button_hover',
 			[
-				'label' =>esc_html__( 'Hover', 'aefe'),
+				'label' =>esc_html__( 'Hover', AEFE_TEXTDOMAIN),
 			]
 		);
 
@@ -409,11 +436,12 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_tm_social_color_hover',
 			[
-				'label' =>esc_html__( 'Color', 'aefe'),
+				'label' =>esc_html__( 'Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member:hover .aefe-tm-single-team-member-social a i' => 'color: {{VALUE}};border-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-socials-profile a i:hover' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -421,11 +449,12 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_tm_social_bg_color_hover',
 			[
-				'label' =>esc_html__( 'Background Color', 'aefe'),
+				'label' =>esc_html__( 'Background Color', AEFE_TEXTDOMAIN),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-tm-single-team-member:hover .aefe-tm-single-team-member-social a i' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-sth-team-socials-profile a i:hover' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -452,7 +481,12 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 			//load render view to show widget output on frontend/website.
-			include 'teammember-one.php';
+
+			if(!empty($settings['aefe-tm-repeater-single']) && 'single' == $settings['aefe-tm-repeater-single']) {
+					include 'teammember-one.php';
+			}elseif(!empty($settings['aefe-tm-repeater-single']) && 'slider' == $settings['aefe-tm-repeater-single']) {
+				include 'teammember-two.php';
+			}
 
 
 
