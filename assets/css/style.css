@@ -268,6 +268,10 @@ color: #cccccc;}
 .aefe-single-some-review-img{margin-bottom: 30px;background-image: url(../img/review-clients-img-bg.png);background-repeat: no-repeat;background-position: center;min-width: 120px;min-height: 116px;padding-top: 6px;padding-left: 3px;position: absolute;top: -65px;left: 0;right: 0;}
 .aefe-single-some-review-img img{width: 100px !important;height: 100px;margin: 0 auto;padding-top: 5px;border-radius: 500px;}
 .aefe-single-some-review-title{text-align: center;padding-top: 80px;}
+.aefe-single-some-review-title .aefe-tms-testimonial-rating {
+   padding-bottom: 0px;
+   margin-top: 10px;
+}
 .aefe-single-some-review-title h2 {margin-bottom: 14px;}
 .aefe-single-some-review-title h2 a{color: #222222;font-size: 16px;font-family: roboto;font-weight: 500;text-transform: uppercase;}
 .aefe-single-some-review-title h4{color: #666666;font-size: 14px;font-family: roboto;font-weight: 400;margin-bottom: 5px;}

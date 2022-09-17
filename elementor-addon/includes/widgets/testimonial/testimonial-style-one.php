@@ -42,6 +42,17 @@ $settings = $this->get_settings_for_display();
                 <div class="aefe-single-some-review-title fix">
                   <h2><a><?php echo esc_html($testimonial_slider['aefe_testimonial_slider_title']); ?></a></h2>
                   <h4><?php echo esc_html($testimonial_slider['aefe_testimonial_slider_subtitle']); ?></h4>
+                  <?php if(!empty($testimonial_slider['aefe_testimonial_slider_rating']) && '0' !== $testimonial_slider['aefe_testimonial_slider_rating']) : 
+                    $tst_val = $testimonial_slider['aefe_testimonial_slider_rating']; 
+                  ?>
+                    <div class="aefe-tms-testimonial-rating">
+                        <?php
+                            for ($x = 1; $x <= $tst_val; $x++)  :    
+                        ?>
+                            <i class="fa fa-star"></i>
+                        <?php endfor;?> 
+                    </div>
+                  <?php  endif; ?>
                 </div>
                 <div class="aefe-single-some-review-content fix">
                   <p><?php echo esc_html($testimonial_slider['aefe_testimonial_slider_content']); ?></p>

@@ -197,7 +197,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Facebook URL', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::URL,				
 				'placeholder' => esc_html__( 'https://fb.com/hmbashar', AEFE_TEXTDOMAIN ),
-				'label_block' => true,
+				'label_block' => true,			
 			]
 		);
 		
@@ -233,6 +233,23 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label_block' => true,
 			]
 		);
+		$repeater->add_control(
+			'aefe_testimonial_slider_rating',
+			[
+				'label' => esc_html__( 'Rating', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => '5',
+				'options' => [
+					'0'  => esc_html__( 'None', AEFE_TEXTDOMAIN),
+					'1'  => esc_html__( '1 Star', AEFE_TEXTDOMAIN),
+					'2'  => esc_html__( '2 Stars', AEFE_TEXTDOMAIN),
+					'3'  => esc_html__( '3 Stars', AEFE_TEXTDOMAIN),
+					'4'  => esc_html__( '4 Stars', AEFE_TEXTDOMAIN),
+					'5'  => esc_html__( '5 Stars', AEFE_TEXTDOMAIN),
+				],
+			]
+		);
+
 		$this->add_control(
 			'aefe_testimonial_slider_list',
 			[
@@ -284,6 +301,11 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			//load render view to show widget output on frontend/website.
 			if(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-one' == $settings['aefe_testimonial_slider_style']) {
 				include 'testimonial-style-one.php';
+			}
+
+			//load render view to show widget output on frontend/website.
+			if(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-two' == $settings['aefe_testimonial_slider_style']) {
+				include 'testimonial-style-two.php';
 			}
 			
 
