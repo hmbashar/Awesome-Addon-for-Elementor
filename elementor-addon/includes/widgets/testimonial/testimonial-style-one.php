@@ -56,6 +56,7 @@ $settings = $this->get_settings_for_display();
                 </div>
                 <div class="aefe-single-some-review-content fix">
                   <p><?php echo esc_html($testimonial_slider['aefe_testimonial_slider_content']); ?></p>
+                 
                
                 </div>
                 <div class="aefe-single-some-review-social fix">          
@@ -67,7 +68,7 @@ $settings = $this->get_settings_for_display();
               </div><!--/ Single Some Review -->
             <?php endforeach; else : ?>              
               <div class="aefe-single-some-review-title fix">
-                  <h2><a>Please add testimonial</a></h2>                  
+                  <h2><a><?php do_action('aefe_please_add_testimonial');?></a></h2>                  
               </div>
             <?php endif; ?>
 

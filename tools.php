@@ -28,7 +28,8 @@ define('AEFE_TEXTDOMAIN','AEFE');
 function aefe_plugin_general_init() {
 
 	// Load plugin file
-	require_once( __DIR__ . '/elementor-addon/includes/elementor-configuration.php' );
+	require_once( AEFE_PATH . '/elementor-addon/includes/elementor-configuration.php' );
+	require_once( AEFE_PATH . '/inc/hooks.php' );
 
 	// Run the plugin
 	\AEFE_ELEMENTOR\Plugin::instance();

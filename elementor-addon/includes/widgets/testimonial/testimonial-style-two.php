@@ -59,7 +59,7 @@ $settings = $this->get_settings_for_display();
         </div><!--/ Single Testimonial -->
         <?php endforeach; else : ?>              
             <div class="aefe-single-some-review-title fix">
-                <h2><a>Please add testimonial</a></h2>                  
+                <h2><a><?php do_action('aefe_please_add_testimonial');?></a></h2>                  
             </div>
         <?php endif; ?>
     </div>
