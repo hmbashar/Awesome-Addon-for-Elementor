@@ -120,6 +120,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'options' => [
 					'testm-style-one'  => esc_html__( 'Style One', AEFE_TEXTDOMAIN ),
 					'testm-style-two' => esc_html__( 'Style Two', AEFE_TEXTDOMAIN ),
+					'testm-style-three' => esc_html__( 'Style Three', AEFE_TEXTDOMAIN ),
 				],
 			]
 		);
@@ -304,8 +305,13 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			}
 
 			//load render view to show widget output on frontend/website.
-			if(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-two' == $settings['aefe_testimonial_slider_style']) {
+			elseif(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-two' == $settings['aefe_testimonial_slider_style']) {
 				include 'testimonial-style-two.php';
+			}
+
+			//load render view to show widget output on frontend/website.
+			elseif(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-three' == $settings['aefe_testimonial_slider_style']) {
+				include 'testimonial-style-three.php';
 			}
 			
 
