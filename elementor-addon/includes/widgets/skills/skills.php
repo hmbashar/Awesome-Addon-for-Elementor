@@ -221,7 +221,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 				
 			]
 		);
-
+		$this->end_controls_section();
 
 
 
