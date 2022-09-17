@@ -37,7 +37,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'AW Pricing Table', 'aefe' );
+		return esc_html__( 'Pricing Table', 'aefe' );
 	}
 
 	/**
@@ -50,7 +50,7 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-bullet-list';
+		return 'eicon-price-table';
 	}
 
 	/**
