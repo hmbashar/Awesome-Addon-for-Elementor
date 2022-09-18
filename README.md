@@ -31,7 +31,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 - Team Member (2 Style)
 - Accordion
 - Skill (2 Style)
-- Testimonial (3 Style)
+- Testimonial Slider (3 Style)
 - Icon Box
 - More Coming soon
 
@@ -70,6 +70,9 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 
 
 ### Changelog 
+
+- 1.2
+    - added teammember, testimonial slider, skill, icon, accordion widget.
 
 - 1.0.1
     - added style field/tab for the existing widget.

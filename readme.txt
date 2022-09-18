@@ -29,6 +29,7 @@ You're welcome to contribute to the plugin on the [Github](https://github.com/hm
 * [Skills Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-2.jpg?raw=true)
 * [Testimonial One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-1.jpg?raw=true)
 * [Testimonial Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-2.jpg?raw=true)
+* [Testimonial Three](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-3.jpg?raw=true)
 * [Icon Box](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/icon-box.jpg?raw=true)
 
 
@@ -50,12 +51,13 @@ No, don't need, this plugin will work with free version, so don't worry.
 
 == Screenshots ==
 
-1. Pricing Table 
-2. Team Member Single
-3. Team Member Slider
-4. Team Member Single and slider (both)
-5. Pricing Table Style two
-
+1. Pricing Table
+2. Team Member (2 Style)
+3. Accordion
+4. Skill (2 Style)
+5. Testimonial Slider (3 Style)
+6. Icon Box
+7. More Coming soon
 
 == Changelog ==
 
