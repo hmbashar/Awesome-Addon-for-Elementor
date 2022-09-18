@@ -298,7 +298,15 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 	 */
 	protected function render() {
 		$settings = $this->get_settings_for_display();
-
+		if (is_admin())
+		{
+		  // solves the width issue
+		  // The javascript called after elementor scripts are fully loaded.
+		  if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
+			  return;
+		  }
+		  echo "<script>jQuery('.owl-carousel').owlCarousel();</script>";
+		}
 			//load render view to show widget output on frontend/website.
 			if(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-one' == $settings['aefe_testimonial_slider_style']) {
 				include 'testimonial-style-one.php';
@@ -320,5 +328,6 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 <?php	
 
 	}
+
 
 }
