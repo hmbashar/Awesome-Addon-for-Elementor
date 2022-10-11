@@ -71,7 +71,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 
 ### Changelog 
 
-- 1.2
+- 1.2.1
     - slider editor view issue fix
 
 - 1.2
