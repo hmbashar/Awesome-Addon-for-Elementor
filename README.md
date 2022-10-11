@@ -72,6 +72,9 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
 ### Changelog 
 
 - 1.2
+    - slider editor view issue fix
+
+- 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.
 
 - 1.0.1
