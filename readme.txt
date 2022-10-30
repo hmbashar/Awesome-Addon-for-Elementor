@@ -63,6 +63,7 @@ No, don't need, this plugin will work with free version, so don't worry.
 
 - 1.2.1
     - slider editor view issue fix
+    - added icon box style tab
 
 - 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.

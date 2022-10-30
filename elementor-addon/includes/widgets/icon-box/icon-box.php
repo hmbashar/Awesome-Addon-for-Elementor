@@ -171,16 +171,105 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 		
 
 		// Icon Box Style
+
+		// Primary Color
 		$this->add_control(
-			'aefe_icon_box_style', [
-				'label' => esc_html__( 'This Features will be available in the next update', AEFE_TEXTDOMAIN ),
-				'type' => \Elementor\Controls_Manager::HEADING,			
-				
+			'aefe_icon_box_primary_color',
+			[
+				'label' => esc_html__( 'Primary Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#f26522',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-design-item' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .aefe-icon-box-design-icon' => 'background-color: {{VALUE}}',
+				],
 			]
 		);
 
+		// Icon Color
+		$this->add_control(
+			'aefe_icon_box_icon_color',
+			[
+				'label' => esc_html__( 'Icon Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#f26522',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-design-icon i' => 'color: {{VALUE}}',
+				],
+			]
+		);
 
+		// Icon background Color
+		$this->add_control(
+			'aefe_icon_box_icon_bgcolor',
+			[
+				'label' => esc_html__( 'Icon BG Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-design-item .aefe-icon-box-design-icon:before' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
 
+		// Title Color
+		$this->add_control(
+			'aefe_icon_box_title_color',
+			[
+				'label' => esc_html__( 'Title Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-design-item h4' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		// Title Typography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_icon_box_title_typography',
+				'selector' => '{{WRAPPER}} .aefe-icon-box-design-item h4',
+			]
+		);
+
+		// Content Color
+		$this->add_control(
+			'aefe_icon_box_content_color',
+			[
+				'label' => esc_html__( 'Content Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#fff',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-design-item p' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		// Content Typography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_icon_box_content_typography',
+				'selector' => '{{WRAPPER}} .aefe-icon-box-design-icon p',
+			]
+		);
+		
+		// Number Color
+		$this->add_control(
+			'aefe_icon_box_number_color',
+			[
+				'label' => esc_html__( 'Number Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ff7737',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-icon-box-de-itm:nth-of-type(2n+1) .aefe-icon-box-design-item:after' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_section(); // End of the style section
 
 	}
 
