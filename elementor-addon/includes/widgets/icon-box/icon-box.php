@@ -251,8 +251,9 @@ class AEFE_IconBox extends \Elementor\Widget_Base {
 		$this->add_group_control(
 			\Elementor\Group_Control_Typography::get_type(),
 			[
+				'label' => esc_html__( 'Content Typhography', AEFE_TEXTDOMAIN ),
 				'name' => 'aefe_icon_box_content_typography',
-				'selector' => '{{WRAPPER}} .aefe-icon-box-design-icon p',
+				'selector' => '{{WRAPPER}} .aefe-icon-box-design-item p',
 			]
 		);
 		

@@ -486,7 +486,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 		  if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 			  return;
 		  }
-		  echo "<script>$('.owl-carousel').owlCarousel();</script>";
+		  echo "<script>jQuery('.owl-carousel').owlCarousel();</script>";
 		}
 			//load render view to show widget output on frontend/website.
 

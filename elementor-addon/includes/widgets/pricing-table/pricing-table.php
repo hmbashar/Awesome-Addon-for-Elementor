@@ -256,16 +256,66 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 				'tab'		=> \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
+	
 		// Header Background
-		$this->add_group_control(
-			\Elementor\Group_Control_Background::get_type(),
+		$this->add_control(
+			'aefe_pricing_tb_background_type',
 			[
-				'name' => 'aefe-tm-background',
-				'label' => esc_html__( 'Background', 'AEFE' ),
-				'types' => [ 'classic', 'gradient', 'video' ],
-				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-table-header',
+				'label' => esc_html__( 'Background Type', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'Image',
+				'options' => [
+					'color'  => esc_html__( 'Color', AEFE_TEXTDOMAIN ),
+					'Image' => esc_html__( 'Image', AEFE_TEXTDOMAIN ),
+				]
 			]
 		);
+		
+		// Header Background Image for style one
+		$this->add_control(
+			'aefe-pt-background-image',
+			[
+				'label' => esc_html__( 'Background Image', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => AEFE_URL . 'assets/img/pricing-header-bg.png',	
+				],
+				'condition' => [
+					'aefe_pricing_tb_background_type' => 'Image',
+					'aefe-pt-style' => 'style-one',
+				]
+			]
+		);
+
+		// Header Background Image for style two
+		$this->add_control(
+			'aefe-pt-background-image-two',
+			[
+				'label' => esc_html__( 'Background Image', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => AEFE_URL . 'assets/img/pricing-header-style-two-bg.png',	
+				],
+				'condition' => [
+					'aefe_pricing_tb_background_type' => 'Image',
+					'aefe-pt-style' => 'style-two',
+				]
+			]
+		);
+
+		$this->add_control(
+			'aefe-pt-header-background-color',
+			[
+				'label' => esc_html__( 'Background Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selector' => '{{WRAPPER}} .aefe-pt-single-pricing-table-header',
+				'default' => '#0081FF',
+				'condition' => [
+					'aefe_pricing_tb_background_type' => 'color',
+				]
+			]
+		);
+
 		//Heading Color
 		$this->add_control(
 			'aefe-pricing-heading-color',
@@ -611,43 +661,8 @@ class AEFE_Pricing_Table extends \Elementor\Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		// package url checked
-		if ( ! empty( $settings['pacakge_button_url']['url'] ) ) {
-			$this->add_link_attributes( 'pacakge_button_url', $settings['pacakge_button_url'] );
-		}
-
-
-		//Check Template Style and add extra class for style two
-		if(!empty($settings['aefe-pt-style']) && $settings['aefe-pt-style'] == 'style-two') {
-			$pricing_table_style = 'aefe-pt-style-two';
-			$pricing_table_buton_style = 'aefe-pt-st-two-b';
-		}else {
-			$pricing_table_style = NULL;
-			$pricing_table_buton_style = NULL;
-		}
-		
-
-		?>
-
-		<!--Single Price-->
-		<div class="<?php echo esc_attr($pricing_table_style); ?> aefe-pt-single-pricing-table">
-			<div class="aefe-pt-single-pricing-table-header">
-				<h2><?php echo esc_html($settings['package_name']);?></h2>
-			</div>
-			<div class="aefe-pt-single-pricing-price">
-				<h2><sup><?php echo esc_html($settings['package_price_currency']);?></sup><?php echo esc_html($settings['package_price']);?><span><?php echo esc_html($settings['package_duration']);?></span></h2>
-			</div>
-			<div class="aefe-pt-single-pricing-content">
-				<?php echo wp_kses($settings['package_content'],  wp_kses_allowed_html('post'));?>
-			</div>
-			<div class="<?php echo esc_attr($pricing_table_buton_style); ?> aefe-pt-single-pricing-buy">
-				<a <?php echo $this->get_render_attribute_string( 'pacakge_button_url' ); ?>><?php echo esc_html($settings['pacakge_button_text']);?></a>
-			</div>
-		</div><!--/ Single Price-->
-
-
-
-<?php
+		//load render view to show widget output on frontend/website.
+		include 'pricing-table-ren.php';
 
 
 	}
