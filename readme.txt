@@ -65,6 +65,7 @@ No, don't need, this plugin will work with free version, so don't worry.
     - slider editor view issue fix
     - Added icon box style tab
     - Added Pricing Table Style Tab
+    - Added Skill Style Tab
 
 - 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.
