@@ -234,6 +234,7 @@ color: #cccccc;}
 	background-color: green;
 	line-height: 34px;
 	text-align: center;
+   font-size: 14px;
 	color: #ffffff;
 	-webkit-transform: translateX(-15px);
 	    -ms-transform: translateX(-15px);
@@ -396,8 +397,12 @@ margin-bottom: 29px;visibility: hidden;transition:1s ease-out;}
 .aefe-tm-sth-single-team-member:hover .aefe-tm-sth-team-socials-profile {visibility: visible;transition:1s;}
 .aefe-tm-sth-single-team-member:hover {box-shadow: -1px 0px 17px -1px #f5eeee;
 margin-bottom: 10px;transition:1s;}
-.aefe-tm-sth-single-team-member:hover:after{content:'';display:block;height:3px;width: 100%;
+.aefe-tm-sth-single-team-member:after {
+   height:3px;
+   content:'';display:block;width: 100%;
 margin-top: 0px;
+}
+.aefe-tm-sth-single-team-member:hover:after{
 background: #7d8fe3; /* Old browsers */
 background: -moz-linear-gradient(left, #7d8fe3 1%, #34dce1 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(left, #7d8fe3 1%,#34dce1 100%); /* Chrome10-25,Safari5.1-6 */

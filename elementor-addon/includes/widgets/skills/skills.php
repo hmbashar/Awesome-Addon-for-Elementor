@@ -213,16 +213,67 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 		);
 		
 
-		// Skill Style
+		// Primary Color
 		$this->add_control(
-			'aefe_skill_1_style', [
-				'label' => esc_html__( 'This Features will be available in the next update', AEFE_TEXTDOMAIN ),
-				'type' => \Elementor\Controls_Manager::HEADING,			
-				
+			'aefe_skill_primary_color',
+			[
+				'label' => esc_html__( 'Primary Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#f7a914',
+				'selectors' => [
+					'{{WRAPPER}} .aefe_skill_icon' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_single_skills .aefe_skill_rate' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_skill_fill.aefe-skills-skill' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_skill_bar_st_label' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_skst_bar' => 'background-color: {{VALUE}}',
+				],
 			]
 		);
-		$this->end_controls_section();
 
+		// Hover Primary Color
+		$this->add_control(
+			'aefe_skill_primary_color_hover',
+			[
+				'label' => esc_html__( 'Primary Hover Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#000000',
+				'selectors' => [
+					'{{WRAPPER}} .aefe_single_skills:hover .aefe_skill_icon' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_st_skill-bar:hover .aefe_skill_bar_st_label' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		// Title Color
+		$this->add_control(
+			'aefe_skill_title_color',
+			[
+				'label' => esc_html__( 'Title Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#000000',
+				'selectors' => [
+					'{{WRAPPER}} .aefe_single_skills .aefe_skill_title h3' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .aefe_st_skill-bar p' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		// Content Color
+		$this->add_control(
+			'aefe_skill_content_olor',
+			[
+				'label' => esc_html__( 'Text Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#000000',
+				'selectors' => [
+					'{{WRAPPER}} .aefe_skill_text p' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+	
+
+		$this->end_controls_section(); // End of the style section
 
 
 	}
