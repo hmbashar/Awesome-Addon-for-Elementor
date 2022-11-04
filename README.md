@@ -76,6 +76,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
     - added icon box style tab
     - Added Pricing Table Style Tab
     - Added Skill Style Tab
+    - Added Team Member Content style
 
 - 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.

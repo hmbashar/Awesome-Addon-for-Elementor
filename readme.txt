@@ -66,6 +66,7 @@ No, don't need, this plugin will work with free version, so don't worry.
     - Added icon box style tab
     - Added Pricing Table Style Tab
     - Added Skill Style Tab
+    - Added Team Member Content style
 
 - 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.
