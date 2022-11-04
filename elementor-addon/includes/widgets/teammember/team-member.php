@@ -375,6 +375,28 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 			]
 		);
 
+		//Content Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_tm_content_typography',
+				'label' =>esc_html__( 'Conetent Typography', AEFE_TEXTDOMAIN),
+				'selector' => '{{WRAPPER}} .aefe-tm-sth-team-about p',
+			]
+		);
+
+		// Title Color
+		$this->add_control(
+			'aefe_tm_content_color',
+			[
+				'label' =>esc_html__( 'Content Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-sth-team-about p' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
 		$this->end_controls_section(); //  End Style Tab for Team Member Single Style
 
 
