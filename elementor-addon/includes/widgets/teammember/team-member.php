@@ -362,7 +362,7 @@ class AEFE_TeamMember extends \Elementor\Widget_Base {
 			]
 		);
 
-		// Title Color
+		// SubTitle Color
 		$this->add_control(
 			'aefe_tm_subtitle_color',
 			[

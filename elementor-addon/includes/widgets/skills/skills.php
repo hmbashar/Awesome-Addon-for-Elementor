@@ -260,7 +260,7 @@ class AEFE_Skills extends \Elementor\Widget_Base {
 
 		// Content Color
 		$this->add_control(
-			'aefe_skill_content_olor',
+			'aefe_skill_content_color',
 			[
 				'label' => esc_html__( 'Text Color', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::COLOR,

@@ -268,22 +268,164 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'aefe_testimonial_slider_style_section',
 			[
-				'label' => esc_html__( 'Style', AEFE_TEXTDOMAIN ),
+				'label' => esc_html__( 'General', AEFE_TEXTDOMAIN ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
 		
-
-		// Testimonial Style
-		$this->add_control(
-			'aefe_testimonial_slider_style_tab', 
+		
+		//Title Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
 			[
-				'label' => esc_html__( 'This Features will be available in the next update.', AEFE_TEXTDOMAIN ),
-				'type' => \Elementor\Controls_Manager::HEADING,			
+				'name' => 'aefe_testmonial_title_typography',
+				'label' =>esc_html__( 'Title Typography', AEFE_TEXTDOMAIN),
+				'selector' => '{{WRAPPER}} .aefe-single-some-review-title h2 a',
 				
 			]
 		);
+
+		// Title Color
+		$this->add_control(
+			'aefe_testmonial_title_color',
+			[
+				'label' =>esc_html__( 'Title Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-title h2 a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		//SubTitle Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_tm_subtitle_typography',
+				'label' =>esc_html__( 'Subtitle Typography', AEFE_TEXTDOMAIN),
+				'selector' => '{{WRAPPER}} .aefe-single-some-review-title h4',
+			]
+		);
+
+		// SubTitle Color
+		$this->add_control(
+			'aefe_testmonial_subtitle_color',
+			[
+				'label' =>esc_html__( 'Subtitle Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-title h4' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		// Star Color
+		$this->add_control(
+			'aefe_testmonial_star_color',
+			[
+				'label' =>esc_html__( 'Star Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tms-testimonial-rating i' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		//Content Typography
+        $this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'aefe_testmonial_content_typography',
+				'label' =>esc_html__( 'Conetent Typography', AEFE_TEXTDOMAIN),
+				'selector' => '{{WRAPPER}} .aefe-single-some-review-content p',
+			]
+		);
+
+		// Content Color
+		$this->add_control(
+			'aefe_testmonial_content_color',
+			[
+				'label' =>esc_html__( 'Content Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-content p' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
 		$this->end_controls_section();
+
+
+		// Social Icon Style Normal and Hover
+		// Pricing Button Section Style
+        $this->start_controls_section(
+			'aefe_testmonial_social_section_style',
+			[
+				'label' =>esc_html__( 'Social Profile', AEFE_TEXTDOMAIN),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->start_controls_tabs( 'aefe_testmonial_social_tabs_style' );
+
+		$this->start_controls_tab(
+			'aefe_testmonial_social_tab_normal',
+			[
+				'label' =>esc_html__( 'Normal', AEFE_TEXTDOMAIN),
+			]
+		);
+
+		$this->add_control(
+			'aefe_testmonial_social_color',
+			[
+				'label' =>esc_html__( 'Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-social a i' => 'color: {{VALUE}};',
+					
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_testmonial_social_icon_size',
+			[
+				'label' => esc_html__( 'Size', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'description' => esc_html__( 'Please input your size with unite (px, rem), like 15px', AEFE_TEXTDOMAIN),
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-social a i' => 'font-size: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'aefe_testmonial_social_tab_button_hover',
+			[
+				'label' =>esc_html__( 'Hover', AEFE_TEXTDOMAIN),
+			]
+		);
+
+
+		$this->add_control(
+			'aefe_testmonial_social_color_hover',
+			[
+				'label' =>esc_html__( 'Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review:hover .aefe-single-some-review-social a i' => 'color: {{VALUE}};',					
+				],
+			]
+		);
+
+
+		$this->end_controls_tab();
+		$this->end_controls_tabs();
+
+		$this->end_controls_section();
+
 
 	}
 
