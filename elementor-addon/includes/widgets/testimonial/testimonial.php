@@ -376,6 +376,32 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
+		// Content Color
+		$this->add_control(
+			'aefe_testmonial_content_color',
+			[
+				'label' =>esc_html__( 'Content Color', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::COLOR,				
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-content' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		// Content Dimensions
+		$this->add_control(
+			'aefe_testmonial_content_margin',
+			[
+				'label' => esc_html__( 'Content Margin', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-single-some-review-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+
 		$this->end_controls_tab(); // end single normal controls
 
 		//Start Single Tab
