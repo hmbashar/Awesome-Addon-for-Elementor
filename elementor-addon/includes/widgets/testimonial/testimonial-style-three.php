@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 $settings = $this->get_settings_for_display();
 ?>
-<div class="aefe-tm-3-testimonial-area fix">
+<div class="aefe-tm-3-testimonial-area fix" style="background:<?php echo($settings['aefe_testmonial_background_color']);?>">
 	<div class="aefe-tm-3-testimonial fix">
 		<div class="aefe-tm-3-testimonial-slider owl-carousel fix">
 			<?php if(!empty($settings['aefe_testimonial_slider_list'])) : foreach($settings['aefe_testimonial_slider_list'] as $testimonial_slider) : ?>

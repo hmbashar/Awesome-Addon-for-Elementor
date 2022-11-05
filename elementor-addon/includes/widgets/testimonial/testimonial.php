@@ -272,6 +272,47 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
+
+		// Box Shadow
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'boxaefe_testimonial_style_two_box_shadow',
+				'label' => esc_html__( 'Box Shadow', AEFE_TEXTDOMAIN ),
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+			]
+		);
+		
+
+		// Box Shadow
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'boxaefe_testimonial_style_two_before_box_shadow',
+				'label' => esc_html__( 'Before Box Shadow', AEFE_TEXTDOMAIN ),
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial:before',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+			]
+		);
+		
+
+		// Box Shadow
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'boxaefe_testimonial_style_two_after_box_shadow',
+				'label' => esc_html__( 'After Box Shadow', AEFE_TEXTDOMAIN ),
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial:after',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+			]
+		);
 		
 		// Start control tabs
 		$this->start_controls_tabs( 'aefe_testmonial_general_tabs_style' );
@@ -293,6 +334,8 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-single-some-review',
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial',
+				'selector' => '{{WRAPPER}} .aefe-tm-3-testimonial-area',
 			]
 		);
 
@@ -304,6 +347,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'name' => 'aefe_testmonial_title_typography',
 				'label' =>esc_html__( 'Title Typography', AEFE_TEXTDOMAIN),
 				'selector' => '{{WRAPPER}} .aefe-single-some-review-title h2 a',
+				'selector' => '{{WRAPPER}} .aefe-tms-testimonial-client-name h2',
 				
 			]
 		);
@@ -316,6 +360,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review-title h2 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-client-name h2' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -327,6 +372,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'name' => 'aefe_tm_subtitle_typography',
 				'label' =>esc_html__( 'Subtitle Typography', AEFE_TEXTDOMAIN),
 				'selector' => '{{WRAPPER}} .aefe-single-some-review-title h4',
+				'selector' => '{{WRAPPER}} .aefe-tms-testimonial-client-name h3',
 			]
 		);
 
@@ -338,6 +384,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review-title h4' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-client-name h3' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -361,6 +408,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'name' => 'aefe_testmonial_content_typography',
 				'label' =>esc_html__( 'Conetent Typography', AEFE_TEXTDOMAIN),
 				'selector' => '{{WRAPPER}} .aefe-single-some-review-content p',
+				'selector' => '{{WRAPPER}} .aefe-tms-testimonial-message p',
 			]
 		);
 
@@ -376,17 +424,6 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
-		// Content Color
-		$this->add_control(
-			'aefe_testmonial_content_color',
-			[
-				'label' =>esc_html__( 'Content Color', AEFE_TEXTDOMAIN),
-				'type' => \Elementor\Controls_Manager::COLOR,				
-				'selectors' => [
-					'{{WRAPPER}} .aefe-single-some-review-content' => 'color: {{VALUE}};',
-				],
-			]
-		);
 
 		// Content Dimensions
 		$this->add_control(
@@ -408,6 +445,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		$this->start_controls_tab(
 			'aefe-testimonial-general-tab-hover', [
 				'label'	=> esc_html__( 'Hover', AEFE_TEXTDOMAIN),
+				
 			]
 		);
 
@@ -420,6 +458,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-single-some-review:hover',
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial:hover',
 			]
 		);
 
@@ -431,6 +470,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review:hover .aefe-single-some-review-title h2 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-single-testimonial:hover .aefe-tms-testimonial-client-name h2' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -444,6 +484,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review:hover .aefe-single-some-review-title h4' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-single-testimonial:hover .aefe-tms-testimonial-client-name h3' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -456,6 +497,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review:hover .aefe-tms-testimonial-rating i' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-single-testimonial:hover .aefe-tms-testimonial-rating i' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -469,6 +511,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review:hover .aefe-single-some-review-content p' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-single-testimonial:hover .aefe-tms-testimonial-message p' => 'color: {{VALUE}};',
 				],
 			]
 		);
