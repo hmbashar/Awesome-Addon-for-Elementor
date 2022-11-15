@@ -77,6 +77,7 @@ This plugin on the [Plugin Directory](https://wordpress.org/plugins/awesome-elem
     - Added Pricing Table Style Tab
     - Added Skill Style Tab
     - Added Team Member Content style
+    - Testimonial hover background issue fix
 
 - 1.2
     - added teammember, testimonial slider, skill, icon, accordion widget.
