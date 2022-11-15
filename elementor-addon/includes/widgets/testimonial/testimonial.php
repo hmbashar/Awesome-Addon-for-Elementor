@@ -326,16 +326,51 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		);
 
 
-		// Background Color
+		// Background Color Style One
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'aefe_testmonial_background_color',
+				'name' => 'aefe_testmonial_background_color1',
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
-				'types' => [ 'classic', 'gradient'],
+				'types' => [ 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-single-some-review',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-one',
+				],
+				
+				
+			]
+		);
+
+		// Background Color Style Two
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe_testmonial_background_color2',
+				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
+				'types' => [ 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+				
+				
+			]
+		);
+
+		// Background Color Style Three
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe_testmonial_background_color3',
+				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
+				'types' => [ 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-tm-3-testimonial-area',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-three',
+				],
+				
+				
 			]
 		);
 
@@ -450,17 +485,39 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		);
 
 
-		// Background Color
+		// Background Color Style One
 		$this->add_group_control(
 			\Elementor\Group_Control_Background::get_type(),
 			[
-				'name' => 'aefe_testmonial_background_color_hover',
+				'name' => 'aefe_testmonial_background_color1_hover',
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
-				'types' => [ 'classic', 'gradient'],
+				'types' => [ 'gradient'],
 				'selector' => '{{WRAPPER}} .aefe-single-some-review:hover',
-				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial:hover',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-one',
+				],
+				
+				
 			]
 		);
+
+		// Background Color Style Two
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe_testmonial_background_color2_hover',
+				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
+				'types' => [ 'gradient'],
+				'selector' => '{{WRAPPER}} .aefe-tms-single-testimonial:hover',
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+				
+				
+			]
+		);
+
+
 
 		// Title Color
 		$this->add_control(
