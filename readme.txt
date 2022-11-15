@@ -3,7 +3,7 @@ Contributors: hmbashar
 Tags: elementor, elementor popular widget, cretive elementor widget, elementor addon, awesome design, wordpress plugin
 Requires at least: 4.7
 Tested up to: 6.1.1
-Stable tag: 1.2.1
+Stable tag: 1.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
