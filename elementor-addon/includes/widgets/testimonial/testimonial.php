@@ -125,6 +125,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
+
 		$this->end_controls_section();
 
 
@@ -254,12 +255,13 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		$this->add_control(
 			'aefe_testimonial_slider_list',
 			[
-				'label' => esc_html__( 'Testimonial List', 'plugin-name' ),
+				'label' => esc_html__( 'Testimonial List', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'title_field' => '{{{ aefe_testimonial_slider_title }}}',
 			]
 		);
+
 		
 		$this->end_controls_section();
 
@@ -273,6 +275,45 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
+		// Number of items
+		$this->add_responsive_control(
+			'aefe_testimonial_item_count',
+			[
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'label' => esc_html__( 'Number of Items', AEFE_TEXTDOMAIN),		
+				'min' => 1,
+				'max' => 8,								
+				'step' => 1,								
+				'devices' => [ 'desktop', 'tablet', 'mobile' ],
+				'desktop_default' => '3',
+				'tablet_default' => '2',
+				'mobile_default' => '1'
+			]
+		);
+		//Auto Play
+		$this->add_control(
+			'aefe_testimonial_slider_autoplay',
+			[
+				'label' => esc_html__( 'AutoPlay', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+		//Loop
+		$this->add_control(
+			'aefe_testimonial_slider_loop',
+			[
+				'label' => esc_html__( 'Loop', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
 		// Box Shadow
 		$this->add_group_control(
 			\Elementor\Group_Control_Box_Shadow::get_type(),
@@ -660,6 +701,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
+		
 		$settings = $this->get_settings_for_display();
 		if (is_admin())
 		{
@@ -668,8 +710,10 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		  if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 			  return;
 		  }
-		  echo "<script>jQuery('.owl-carousel').owlCarousel();</script>";
+
 		}
+
+
 			//load render view to show widget output on frontend/website.
 			if(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-one' == $settings['aefe_testimonial_slider_style']) {
 				include 'testimonial-style-one.php';
@@ -684,10 +728,12 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			elseif(!empty($settings['aefe_testimonial_slider_style']) && 'testm-style-three' == $settings['aefe_testimonial_slider_style']) {
 				include 'testimonial-style-three.php';
 			}
-			
+
 
 	?>
-          
+  
+
+
 <?php	
 
 	}

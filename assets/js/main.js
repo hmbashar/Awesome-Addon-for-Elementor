@@ -51,26 +51,6 @@ Both Page
 
 
 
-	$('.aefe-some-review-content-slide').owlCarousel({
-		dots: false,
-		items: 4,
-		loop: true,
-		autoplay:true,
-		responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:2
-				},
-				750:{
-					items:2
-				},
-				1000:{
-					items:4
-				}
-			}
-	});
 
 	// Testimonial Slider
 	$(".aefe-tms-testimonial-content-area").owlCarousel({				

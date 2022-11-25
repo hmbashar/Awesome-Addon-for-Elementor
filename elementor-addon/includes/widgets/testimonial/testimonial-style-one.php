@@ -3,10 +3,60 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+$unique_ID = 'aefe-owl-testimonial-'.uniqid();
+
 $settings = $this->get_settings_for_display();
+
+$item_count_desk = $settings['aefe_testimonial_item_count'] ? $settings['aefe_testimonial_item_count'] : 3;
+$item_count_tab = $settings['aefe_testimonial_item_count_tablet'] ? $settings['aefe_testimonial_item_count_tablet'] : 2;
+$item_count_mobile = $settings['aefe_testimonial_item_count_mobile'] ? $settings['aefe_testimonial_item_count_mobile'] : 1;
+
+
+// check autoplay on/off
+  if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
+    $autoplay = 1;
+  }else {
+    $autoplay = 0;
+  }
+
+// check Loop on/off
+  if('yes' === $settings['aefe_testimonial_slider_loop']) {
+    $aefe_loop = 1;
+  }else {
+    $aefe_loop = 0;
+  }
+
 ?>
+
+<script>
+  jQuery(document).ready(function(){
+    
+    jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({
+      dots: false,				
+      loop: <?php echo $aefe_loop; ?>,
+      autoplay: <?php echo $autoplay; ?>,
+      responsive:{
+          0:{
+            items:<?php echo $item_count_mobile; ?>
+          },
+          600:{
+            items:2
+          },
+          750:{
+            items:<?php echo $item_count_tab; ?>
+          },
+          1000:{
+            items:<?php echo $item_count_desk; ?>
+          }
+        }
+    });
+  });
+</script>
+
+
          <div class="aefe-some-review-contents-area fix">
-            <div class="aefe-some-review-content-slide fix owl-carousel">
+            <div class="aefe-some-review-content-slide fix owl-carousel aefe-owl-testimonial-<?php echo $unique_ID; ?>">
               <?php if(!empty($settings['aefe_testimonial_slider_list'])) : foreach($settings['aefe_testimonial_slider_list'] as $testimonial_slider) : 
 
                 				if ( ! empty( $testimonial_slider['aefe_testimonial_slider_fb_url']['url'] ) ) {
@@ -32,6 +82,7 @@ $settings = $this->get_settings_for_display();
               <!--Single Some Review -->
               <div class="aefe-single-some-review">
                 <div class="aefe-single-some-review-img">
+                  
                   <?php if(!empty($testimonial_slider['aefe_testimonial_slider_img']['url'])) : ?>
                     <img src="<?php echo esc_url($testimonial_slider['aefe_testimonial_slider_img']['url']); ?>" alt="">
                   <?php else : ?>
