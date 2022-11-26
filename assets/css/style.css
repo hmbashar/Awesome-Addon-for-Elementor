@@ -287,6 +287,22 @@ color: #cccccc;}
 .aefe-single-some-review:hover .aefe-single-some-review-social a{border-right-color: #fff;}
 
 
+/*------------
+* Owl Nav
+*------------*/
+.aefe-some-review-content-slide {position: relative;}
+.aefe-some-review-contents-area .owl-nav{position: absolute;top: 47%;left: 0;right: 0;}
+.aefe-some-review-contents-area .owl-nav button i{font-size: 30px;color: #fff;display: inline-block;background-color: black;padding: 10px 20px;border-radius: 3px;}
+.aefe-some-review-contents-area .owl-nav button.owl-prev{margin-left: 30px;}
+.aefe-some-review-contents-area .owl-nav button.owl-next{float: right;margin-right: 30px;}
+
+/*------------
+* Owl Dots
+*------------*/
+.aefe-some-review-contents-area .owl-dots{text-align: center;margin-top: 0;}
+.aefe-some-review-contents-area .owl-dots button.owl-dot span{width: 12px;height: 12px;display: block;background-color: #666;border-radius: 50%;margin-right: 5px;}
+.aefe-some-review-contents-area .owl-dots button.owl-dot.active span{background-color: black;}
+
 /*---------------------------------------
     Testimonial Area
 -----------------------------------------*/

@@ -19,8 +19,10 @@ $item_gap_desk = $settings['aefe_testimonial_item_gap'] ? $settings['aefe_testim
 $item_gap_tab = $settings['aefe_testimonial_item_gap_tablet'] ? $settings['aefe_testimonial_item_gap_tablet'] : 0; // for tab
 $item_gap_mobile = $settings['aefe_testimonial_item_gap_mobile'] ? $settings['aefe_testimonial_item_gap_mobile'] : 0; // for mobile
 
-
-$mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe_testimonial_item_mouseDrag'] : 0;
+// Mouse Drag
+$mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe_testimonial_item_mouseDrag'] : 1; // for desktop
+$mouseDrag_tab = $settings['aefe_testimonial_item_mouseDrag_tablet'] ? $settings['aefe_testimonial_item_mouseDrag_tablet'] : 1; // for tab
+$mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $settings['aefe_testimonial_item_mouseDrag_mobile'] : 1; // for mobile
 
 // check autoplay on/off
   if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
@@ -46,29 +48,30 @@ $mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe
     jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({
       dots: true,				
       loop: <?php echo $aefe_loop; ?>,
-      autoplay: <?php echo $autoplay; ?>,
+      //autoplay: <?php echo $autoplay; ?>,
       nav: true,
-      slideBy: 2,
+      navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
       autoplayHoverPause: false,
      
       responsive:{
           0:{
             items:<?php echo $item_count_mobile; ?>,
-            margin:<?php echo $item_gap_mobile; ?>
+            margin:<?php echo $item_gap_mobile; ?>,
+            mouseDrag: <?php echo $mouseDrag_mobile; ?>, 
           },
           600:{
             items:2
           },
           750:{
             items:<?php echo $item_count_tab; ?>,
-            margin:<?php echo $item_gap_tab; ?>
+            margin:<?php echo $item_gap_tab; ?>,
+            mouseDrag: <?php echo $mouseDrag_tab; ?>, 
           },
           1000:{
             items:<?php echo $item_count_desk; ?>,
             margin:<?php echo $item_gap_desk; ?>,
            // center: true,
-            mouseDrag: <?php echo $mouseDrag_desk; ?>,
-           // autoWidth:true,
+            mouseDrag: <?php echo $mouseDrag_desk; ?>,           
           }
         }
     });
