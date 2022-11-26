@@ -1,5 +1,7 @@
 <?php
 namespace AEFE_ELEMENTOR\AEFETestimonialSlider;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -721,6 +723,248 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		$this->end_controls_section();
 
 
+
+		// Nav
+		$this->start_controls_section(
+			'aefe_testmonial_slider_nav_bar',
+			[
+				'label' => esc_html__( 'Nav', AEFE_TEXTDOMAIN),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+
+		$this->add_control(
+			'aefe_testi_slider_nav_isize',
+			[
+				'label' => esc_html__( 'Icon Size', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'rem' ],	
+				'default' => [
+					'unit' => 'px',
+					'size' => 30,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_testi_slider_nav_button_size',
+			[
+				'label' => esc_html__( 'Button Size', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'default' => [
+					'top'		=> '10',
+					'bottom'	=> '10',
+					'left'		=> '20',
+					'right'		=> '20',
+					'unit' 		=> 'px',
+					'isLinked' => false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_nav_selected_icon_left',
+			[
+				'label' => esc_html__( 'Left Nav', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'skin' => 'inline',
+				'label_block' => false,
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_nav_selected_icon_right',
+			[
+				'label' => esc_html__( 'Right Nav', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'fa4compatibility' => 'icon',
+				'skin' => 'inline',
+				'label_block' => false,
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_testimonial_nav_left_icon_indent',
+			[
+				'label' => esc_html__( 'Left Nav Spacing', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'rem' ],	
+				'range' => [
+					'px' => [
+						'max' => 150,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 30,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button.owl-prev' => 'margin-left: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_testimonial_nav_right_icon_indent',
+			[
+				'label' => esc_html__( 'Right Nav Spacing', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'rem' ],	
+				'range' => [
+					'px' => [
+						'max' => 150,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 30,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button.owl-next' => 'margin-right: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'aefe_testimonial_nav_position_indent',
+			[
+				'label' => esc_html__( 'Nav Position', AEFE_TEXTDOMAIN),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'rem' ],				
+				'default' => [
+					'unit' => '%',
+					'size' => 47,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav' => 'top: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_view',
+			[
+				'label' => esc_html__( 'View', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::HIDDEN,
+				'default' => 'traditional',
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_nav_border_radius',
+			[
+				'label' => esc_html__( 'Border Radius', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em' ],
+				'default'	=> [
+					'top' 		=> '3',
+					'right' 	=> '3',
+					'bottom' 	=> '3',
+					'left' 		=> '3',
+					'unit' 		=> 'px',
+					'isLinked' 	=> false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->start_controls_tabs( 'aefe_testimonial_tabs_button_style');
+
+
+		$this->start_controls_tab(
+			'aefe_testimonial_slider_tab_button_normal',
+			[
+				'label' => esc_html__( 'Normal', AEFE_TEXTDOMAIN ),
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_button_nav_color',
+			[
+				'label' => esc_html__( 'Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe_testimonial_slider_nav_background',
+				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
+				'types' => [ 'classic', 'gradient' ],
+				'exclude' => [ 'image' ],
+				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i',
+				'fields_options' => [
+					'background' => [
+						'default' => 'classic',
+					],
+					'color' => [
+						'default' => '#000000',
+					],
+				],
+				//'condition' => $args['section_condition'],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'aefe_testimonial_slider_tab_button_hover',
+			[
+				'label' => esc_html__( 'Hover', AEFE_TEXTDOMAIN ),
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_button_nav_hover_color',
+			[
+				'label' => esc_html__( 'Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i' => 'color: {{VALUE}};',
+				],
+				//'condition' => $args['section_condition'],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Background::get_type(),
+			[
+				'name' => 'aefe_testimonial_slider_nav_button_background_hover',
+				'label' => esc_html__( 'Background', 'elementor' ),
+				'types' => [ 'classic', 'gradient' ],
+				'exclude' => [ 'image' ],
+				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i, {{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i:focus',
+				'fields_options' => [
+					'background' => [
+						'default' => 'classic',
+					],
+				],
+			//	'condition' => $args['section_condition'],
+			]
+		);
+
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
+		$this->end_controls_section(); // Nav
 	}
 
 

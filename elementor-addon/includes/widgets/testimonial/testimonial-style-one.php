@@ -48,7 +48,7 @@ $mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $setti
     jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({
       dots: true,				
       loop: <?php echo $aefe_loop; ?>,
-      //autoplay: <?php echo $autoplay; ?>,
+      autoplay: <?php echo $autoplay; ?>,
       nav: true,
       navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
       autoplayHoverPause: false,
