@@ -290,6 +290,38 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'mobile_default' => '1'
 			]
 		);
+
+		// Number of items
+		$this->add_responsive_control(
+			'aefe_testimonial_item_gap',
+			[
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'label' => esc_html__( 'Gap', AEFE_TEXTDOMAIN),		
+				'min' => 0,
+				'max' => 100,								
+				'step' => 1,								
+				'devices' => [ 'desktop', 'tablet', 'mobile' ],
+				'desktop_default' => 0,
+				'tablet_default' => 0,
+				'mobile_default' => 0
+			]
+		);
+
+		// Number of items
+		$this->add_responsive_control(
+			'aefe_testimonial_item_mouseDrag',
+			[
+				'label' => esc_html__( 'Mouse Drag', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'return_value' => 1,										
+				'devices' => [ 'desktop', 'tablet', 'mobile' ],
+				'desktop_default' => 1,
+				'tablet_default' => 1,
+				'mobile_default' => 1
+			]
+		);
 		//Auto Play
 		$this->add_control(
 			'aefe_testimonial_slider_autoplay',

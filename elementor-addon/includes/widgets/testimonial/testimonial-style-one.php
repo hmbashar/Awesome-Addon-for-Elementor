@@ -8,10 +8,19 @@ $unique_ID = 'aefe-owl-testimonial-'.uniqid();
 
 $settings = $this->get_settings_for_display();
 
-$item_count_desk = $settings['aefe_testimonial_item_count'] ? $settings['aefe_testimonial_item_count'] : 3;
-$item_count_tab = $settings['aefe_testimonial_item_count_tablet'] ? $settings['aefe_testimonial_item_count_tablet'] : 2;
-$item_count_mobile = $settings['aefe_testimonial_item_count_mobile'] ? $settings['aefe_testimonial_item_count_mobile'] : 1;
+// Item Count
+$item_count_desk = $settings['aefe_testimonial_item_count'] ? $settings['aefe_testimonial_item_count'] : 3; // for desktop
+$item_count_tab = $settings['aefe_testimonial_item_count_tablet'] ? $settings['aefe_testimonial_item_count_tablet'] : 2; // for tab
+$item_count_mobile = $settings['aefe_testimonial_item_count_mobile'] ? $settings['aefe_testimonial_item_count_mobile'] : 1; // for mobile
 
+
+// Item Gap
+$item_gap_desk = $settings['aefe_testimonial_item_gap'] ? $settings['aefe_testimonial_item_gap'] : 0; // for desktop
+$item_gap_tab = $settings['aefe_testimonial_item_gap_tablet'] ? $settings['aefe_testimonial_item_gap_tablet'] : 0; // for tab
+$item_gap_mobile = $settings['aefe_testimonial_item_gap_mobile'] ? $settings['aefe_testimonial_item_gap_mobile'] : 0; // for mobile
+
+
+$mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe_testimonial_item_mouseDrag'] : 0;
 
 // check autoplay on/off
   if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
@@ -27,27 +36,39 @@ $item_count_mobile = $settings['aefe_testimonial_item_count_mobile'] ? $settings
     $aefe_loop = 0;
   }
 
+
+
 ?>
 
 <script>
   jQuery(document).ready(function(){
     
     jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({
-      dots: false,				
+      dots: true,				
       loop: <?php echo $aefe_loop; ?>,
       autoplay: <?php echo $autoplay; ?>,
+      nav: true,
+      slideBy: 2,
+      autoplayHoverPause: false,
+     
       responsive:{
           0:{
-            items:<?php echo $item_count_mobile; ?>
+            items:<?php echo $item_count_mobile; ?>,
+            margin:<?php echo $item_gap_mobile; ?>
           },
           600:{
             items:2
           },
           750:{
-            items:<?php echo $item_count_tab; ?>
+            items:<?php echo $item_count_tab; ?>,
+            margin:<?php echo $item_gap_tab; ?>
           },
           1000:{
-            items:<?php echo $item_count_desk; ?>
+            items:<?php echo $item_count_desk; ?>,
+            margin:<?php echo $item_gap_desk; ?>,
+           // center: true,
+            mouseDrag: <?php echo $mouseDrag_desk; ?>,
+           // autoWidth:true,
           }
         }
     });
