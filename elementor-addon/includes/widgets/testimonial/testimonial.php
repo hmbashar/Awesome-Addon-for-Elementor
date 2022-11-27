@@ -336,6 +336,37 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'default' => 'yes',
 			]
 		);
+		
+		
+		//Nav Switch
+		$this->add_responsive_control(
+			'aefe_testimonial_slider_nav_switch',
+			[
+				'label' => esc_html__( 'Nav', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'return_value' => 1,
+				'default' => 0,
+			]
+		);
+		
+		
+		
+		//Dot Switch
+		$this->add_responsive_control(
+			'aefe_testimonial_slider_dot_switch',
+			[
+				'label' => esc_html__( 'Dots', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'return_value' => 1,
+				'default' => 0,
+			]
+		);
+		
+
 		//Loop
 		$this->add_control(
 			'aefe_testimonial_slider_loop',
@@ -730,6 +761,9 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Nav', AEFE_TEXTDOMAIN),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'aefe_testimonial_slider_nav_switch' => '1',
+				],
 			]
 		);
 
@@ -769,7 +803,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 			]
 		);
-
+/*
 		$this->add_control(
 			'aefe_testimonial_nav_selected_icon_left',
 			[
@@ -791,7 +825,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label_block' => false,
 			]
 		);
-
+*/
 		$this->add_responsive_control(
 			'aefe_testimonial_nav_left_icon_indent',
 			[
@@ -965,6 +999,94 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 		$this->end_controls_tabs();
 
 		$this->end_controls_section(); // Nav
+
+		// Dots
+		$this->start_controls_section(
+			'aefe_testmonial_slider_dots_bar',
+			[
+				'label' => esc_html__( 'Dots', AEFE_TEXTDOMAIN),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'aefe_testimonial_slider_dot_switch' => '1',
+				],
+			]
+		);
+
+
+		$this->add_control(
+			'aefe_testi_slider_dot_size',
+			[
+				'label' => esc_html__( 'Size', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%', 'rem' ],	
+				'default' => [
+					'unit' => 'px',
+					'size' => 12,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_dots_space',
+			[
+				'label' => esc_html__( 'Spacing', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'aefe_testimonial_dot_gap',
+			[
+				'label' => esc_html__( 'Dot Gap', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'em' ],
+				'default' => [
+					'unit' => 'px',
+					'size' => 5,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'margin-right: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		// DOt Normal Color
+		$this->add_control(
+			'aefe_testimonial_slider_dot_color',
+			[
+				'label' => esc_html__( 'Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#666666',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		//Dot Active Color
+		$this->add_control(
+			'aefe_testimonial_slider_dot_active_color',
+			[
+				'label' => esc_html__( 'Active Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#000000',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot.active span' => 'background-color: {{VALUE}};',
+				],				
+			]
+		);
+
+		$this->end_controls_section(); // Nav
+
+
+
 	}
 
 

@@ -24,6 +24,20 @@ $mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe
 $mouseDrag_tab = $settings['aefe_testimonial_item_mouseDrag_tablet'] ? $settings['aefe_testimonial_item_mouseDrag_tablet'] : 1; // for tab
 $mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $settings['aefe_testimonial_item_mouseDrag_mobile'] : 1; // for mobile
 
+
+// Nav Bar
+$nav_desk = $settings['aefe_testimonial_slider_nav_switch'] ? $settings['aefe_testimonial_slider_nav_switch'] : 0; // for desktop
+$nav_tab = $settings['aefe_testimonial_slider_nav_switch_tablet'] ? $settings['aefe_testimonial_slider_nav_switch_tablet'] : 0; // for tab
+$nav_mobile = $settings['aefe_testimonial_slider_nav_switch_mobile'] ? $settings['aefe_testimonial_slider_nav_switch_mobile'] : 0; // for mobile
+
+
+// dot Bar
+$dot_desk = $settings['aefe_testimonial_slider_dot_switch'] ? $settings['aefe_testimonial_slider_dot_switch'] : 0; // for desktop
+$dot_tab = $settings['aefe_testimonial_slider_dot_switch_tablet'] ? $settings['aefe_testimonial_slider_dot_switch_tablet'] : 0; // for tab
+$dot_mobile = $settings['aefe_testimonial_slider_dot_switch_mobile'] ? $settings['aefe_testimonial_slider_dot_switch_mobile'] : 0; // for mobile
+
+
+
 // check autoplay on/off
   if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
     $autoplay = 1;
@@ -45,19 +59,18 @@ $mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $setti
 <script>
   jQuery(document).ready(function(){
     
-    jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({
-      dots: true,				
+    jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({     		
       loop: <?php echo $aefe_loop; ?>,
-      autoplay: <?php echo $autoplay; ?>,
-      nav: true,
+      autoplay: <?php echo $autoplay; ?>,      
       navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-      autoplayHoverPause: false,
-     
+      autoplayHoverPause: false,     
       responsive:{
           0:{
             items:<?php echo $item_count_mobile; ?>,
             margin:<?php echo $item_gap_mobile; ?>,
             mouseDrag: <?php echo $mouseDrag_mobile; ?>, 
+            nav: <?php echo $nav_mobile; ?>,
+            dots: <?php echo $dot_mobile; ?>,
           },
           600:{
             items:2
@@ -66,12 +79,15 @@ $mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $setti
             items:<?php echo $item_count_tab; ?>,
             margin:<?php echo $item_gap_tab; ?>,
             mouseDrag: <?php echo $mouseDrag_tab; ?>, 
+            nav: <?php echo $nav_tab; ?>,
+            dots: <?php echo $dot_tab; ?>,
           },
           1000:{
             items:<?php echo $item_count_desk; ?>,
             margin:<?php echo $item_gap_desk; ?>,
-           // center: true,
-            mouseDrag: <?php echo $mouseDrag_desk; ?>,           
+            nav: <?php echo $nav_desk; ?>,
+            mouseDrag: <?php echo $mouseDrag_desk; ?>,  
+            dots: <?php echo $dot_desk; ?>,         
           }
         }
     });
