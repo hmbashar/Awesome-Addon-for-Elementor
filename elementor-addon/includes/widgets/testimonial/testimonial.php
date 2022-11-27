@@ -803,7 +803,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 			]
 		);
-/*
+
 		$this->add_control(
 			'aefe_testimonial_nav_selected_icon_left',
 			[
@@ -812,6 +812,10 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'fa4compatibility' => 'icon',
 				'skin' => 'inline',
 				'label_block' => false,
+				'default' => [
+					'value' => 'fas fa-angle-left',
+					'library' => 'fa-solid',
+				],
 			]
 		);
 
@@ -823,9 +827,13 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'fa4compatibility' => 'icon',
 				'skin' => 'inline',
 				'label_block' => false,
+				'default' => [
+					'value' => 'fas fa-angle-right',
+					'library' => 'fa-solid',
+				],
 			]
 		);
-*/
+
 		$this->add_responsive_control(
 			'aefe_testimonial_nav_left_icon_indent',
 			[

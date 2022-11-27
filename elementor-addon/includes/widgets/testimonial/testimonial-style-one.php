@@ -62,7 +62,7 @@ $dot_mobile = $settings['aefe_testimonial_slider_dot_switch_mobile'] ? $settings
     jQuery('.aefe-owl-testimonial-<?php echo $unique_ID; ?>').owlCarousel({     		
       loop: <?php echo $aefe_loop; ?>,
       autoplay: <?php echo $autoplay; ?>,      
-      navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+      navText: ['<?php \Elementor\Icons_Manager::render_icon( $settings['aefe_testimonial_nav_selected_icon_left'], [ 'aria-hidden' => 'true' ] ); ?>', '<?php \Elementor\Icons_Manager::render_icon( $settings['aefe_testimonial_nav_selected_icon_right'], [ 'aria-hidden' => 'true' ] ); ?>'],
       autoplayHoverPause: false,     
       responsive:{
           0:{
