@@ -3,12 +3,96 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+
+$unique_ID = uniqid();
+
 $settings = $this->get_settings_for_display();
+
+// Item Count
+$item_count_desk = $settings['aefe_testimonial_item_count'] ? $settings['aefe_testimonial_item_count'] : 1; // for desktop
+$item_count_tab = $settings['aefe_testimonial_item_count_tablet'] ? $settings['aefe_testimonial_item_count_tablet'] : 1; // for tab
+$item_count_mobile = $settings['aefe_testimonial_item_count_mobile'] ? $settings['aefe_testimonial_item_count_mobile'] : 1; // for mobile
+
+
+// Mouse Drag
+$mouseDrag_desk = $settings['aefe_testimonial_item_mouseDrag'] ? $settings['aefe_testimonial_item_mouseDrag'] : 1; // for desktop
+$mouseDrag_tab = $settings['aefe_testimonial_item_mouseDrag_tablet'] ? $settings['aefe_testimonial_item_mouseDrag_tablet'] : 1; // for tab
+$mouseDrag_mobile = $settings['aefe_testimonial_item_mouseDrag_mobile'] ? $settings['aefe_testimonial_item_mouseDrag_mobile'] : 1; // for mobile
+
+
+// Nav Bar
+$nav_desk = $settings['aefe_testimonial_slider_nav_switch'] ? $settings['aefe_testimonial_slider_nav_switch'] : 0; // for desktop
+$nav_tab = $settings['aefe_testimonial_slider_nav_switch_tablet'] ? $settings['aefe_testimonial_slider_nav_switch_tablet'] : 0; // for tab
+$nav_mobile = $settings['aefe_testimonial_slider_nav_switch_mobile'] ? $settings['aefe_testimonial_slider_nav_switch_mobile'] : 0; // for mobile
+
+
+// dot Bar
+$dot_desk = $settings['aefe_testimonial_slider_dot_switch'] ? $settings['aefe_testimonial_slider_dot_switch'] : 0; // for desktop
+$dot_tab = $settings['aefe_testimonial_slider_dot_switch_tablet'] ? $settings['aefe_testimonial_slider_dot_switch_tablet'] : 0; // for tab
+$dot_mobile = $settings['aefe_testimonial_slider_dot_switch_mobile'] ? $settings['aefe_testimonial_slider_dot_switch_mobile'] : 0; // for mobile
+
+
+
+// check autoplay on/off
+  if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
+    $autoplay = 1;
+  }else {
+    $autoplay = 0;
+  }
+
+// check Loop on/off
+  if('yes' === $settings['aefe_testimonial_slider_loop']) {
+    $aefe_loop = 1;
+  }else {
+    $aefe_loop = 0;
+  }
+
+
+
+
+
 ?>
+
+<script>
+  jQuery(document).ready(function(){
+    
+    jQuery('.aefe-owl-testimonial-two-<?php echo $unique_ID; ?>').owlCarousel({     		
+      loop: <?php echo $aefe_loop; ?>,
+      autoplay: <?php echo $autoplay; ?>,      
+      navText: ['<?php \Elementor\Icons_Manager::render_icon( $settings['aefe_testimonial_nav_selected_icon_left'], [ 'aria-hidden' => 'true' ] ); ?>', '<?php \Elementor\Icons_Manager::render_icon( $settings['aefe_testimonial_nav_selected_icon_right'], [ 'aria-hidden' => 'true' ] ); ?>'],
+      autoplayHoverPause: false,     
+      responsive:{
+          0:{
+            items:<?php echo $item_count_mobile; ?>,            
+            mouseDrag: <?php echo $mouseDrag_mobile; ?>, 
+            nav: <?php echo $nav_mobile; ?>,
+            dots: <?php echo $dot_mobile; ?>,
+          },
+          600:{
+            items:2
+          },
+          750:{
+            items:<?php echo $item_count_tab; ?>,
+            mouseDrag: <?php echo $mouseDrag_tab; ?>, 
+            nav: <?php echo $nav_tab; ?>,
+            dots: <?php echo $dot_tab; ?>,
+          },
+          1000:{
+            items:<?php echo $item_count_desk; ?>,
+            nav: <?php echo $nav_desk; ?>,
+            mouseDrag: <?php echo $mouseDrag_desk; ?>,  
+            dots: <?php echo $dot_desk; ?>,         
+          }
+        }
+    });
+  });
+</script>
+
    
      <!--Testimonial Contents Area-->
 <div class="aefe-tms-testimonial-bottom">
-    <div class="aefe-tms-testimonial-content-area owl-carousel">
+    <div class="aefe-tms-testimonial-content-area owl-carousel aefe-owl-testimonial-two-<?php echo $unique_ID; ?>">
         <?php if(!empty($settings['aefe_testimonial_slider_list'])) : foreach($settings['aefe_testimonial_slider_list'] as $testimonial_slider) : 
 
             if ( ! empty( $testimonial_slider['aefe_testimonial_slider_fb_url']['url'] ) ) {

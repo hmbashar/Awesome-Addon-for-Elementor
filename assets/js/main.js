@@ -52,16 +52,6 @@ Both Page
 
 
 
-	// Testimonial Slider
-	$(".aefe-tms-testimonial-content-area").owlCarousel({				
-		items: 1,
-		autoplay: true,
-		dots: true,				
-		loop: true,				
-		nav: true,
-		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-
-	});
 
 	// Team Member Style Three
 	$(".aefe-tm-sth-our-team-content-area").owlCarousel({

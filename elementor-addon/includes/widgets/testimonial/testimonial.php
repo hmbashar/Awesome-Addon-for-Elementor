@@ -561,6 +561,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,				
 				'selectors' => [
 					'{{WRAPPER}} .aefe-single-some-review-content p' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-message p' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -773,13 +774,14 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__( 'Icon Size', AEFE_TEXTDOMAIN ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%', 'rem' ],	
+				'size_units' => [ 'px', 'rem' ],	
 				'default' => [
 					'unit' => 'px',
 					'size' => 30,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -800,6 +802,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -888,6 +891,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav' => 'top: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -917,6 +921,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -939,6 +944,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'default' => '#ffffff',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -979,8 +985,8 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i' => 'color: {{VALUE}};',
-				],
-				//'condition' => $args['section_condition'],
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button:hover i' => 'color: {{VALUE}};',
+				]				
 			]
 		);
 
@@ -988,7 +994,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			\Elementor\Group_Control_Background::get_type(),
 			[
 				'name' => 'aefe_testimonial_slider_nav_button_background_hover',
-				'label' => esc_html__( 'Background', 'elementor' ),
+				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient' ],
 				'exclude' => [ 'image' ],
 				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i, {{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i:focus',
@@ -996,8 +1002,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 					'background' => [
 						'default' => 'classic',
 					],
-				],
-			//	'condition' => $args['section_condition'],
+				]
 			]
 		);
 
