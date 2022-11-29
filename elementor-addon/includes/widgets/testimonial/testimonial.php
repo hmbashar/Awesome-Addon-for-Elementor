@@ -1072,6 +1072,49 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 				],
+				'condition' => [
+					'aefe_testimonial_slider_style!' => 'testm-style-three',
+				],
+			]
+		);
+
+		// Dot Width for testimonial style 3
+		$this->add_control(
+			'aefe_testi_slider_dot_width_tms3',
+			[
+				'label' => esc_html__( 'Width', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'rem' ],	
+				'default' => [
+					'unit' => 'px',
+					'size' => 30,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots .owl-dot' => 'width: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-three',
+				],
+			]
+		);
+
+		// Dot Height for testimonial style 3
+		$this->add_control(
+			'aefe_testi_slider_dot_height_tms3',
+			[
+				'label' => esc_html__( 'Height', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'rem' ],	
+				'default' => [
+					'unit' => 'px',
+					'size' => 2,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots .owl-dot' => 'height: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-three',
+				],
 			]
 		);
 
@@ -1084,6 +1127,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -1101,6 +1145,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'margin-right: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'margin-right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots button.owl-dot' => 'margin-right: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -1115,6 +1160,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'background-color: {{VALUE}};',
 					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots .owl-dot' => 'background: {{VALUE}};',
 				],
 			]
 		);
@@ -1129,6 +1175,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot.active span' => 'background-color: {{VALUE}};',
 					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-dot.active span' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tm-3-testimonial-slider .owl-dots .owl-dot.active, .aefe-tm-3-testimonial-slider .owl-dots .owl-dot:hover' => 'background: {{VALUE}};',
 				],				
 			]
 		);
