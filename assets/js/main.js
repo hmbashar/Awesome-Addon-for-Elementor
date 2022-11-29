@@ -79,15 +79,15 @@ Both Page
 	
 	});
 
-	//testimonial style three
-	$(".aefe-tm-3-testimonial-slider").owlCarousel({			
-		items: 1,
-		autoplay: true,
-		nav: false,			
-		dots: true,
-		loop: true		
+	// //testimonial style three
+	// $(".aefe-tm-3-testimonial-slider").owlCarousel({			
+	// 	items: 1,
+	// 	autoplay: true,
+	// 	nav: false,			
+	// 	dots: true,
+	// 	loop: true		
 	
-	});	
+	// });	
 
 
 })(jQuery);

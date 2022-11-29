@@ -479,7 +479,7 @@ background: #cccccc;margin-right:12px;transition:0.5s ease-out;}
    background: -webkit-linear-gradient(left, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* Chrome10-25,Safari5.1-6 */
    background: linear-gradient(to right, #7f8ce3 0%,#55bde3 41%,#32dee1 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7f8ce3', endColorstr='#32dee1',GradientType=1 ); /* IE6-9 */}
-
+.aefe-tm-3-single-testimonial-rating {padding-bottom: 10px;margin-top:20px;}
 
 
 /*=======================================
