@@ -366,6 +366,24 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 		
+		
+		
+		//Quote Switch
+		$this->add_control(
+			'aefe_testimonial_slider_quote_switch',
+			[
+				'label' => esc_html__( 'Quote Icon', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'On', AEFE_TEXTDOMAIN ),
+				'label_off' => esc_html__( 'Off', AEFE_TEXTDOMAIN),
+				'condition' => [
+					'aefe_testimonial_slider_style' => 'testm-style-two',
+				],
+				'return_value' => 1,
+				'default' => 0,
+			]
+		);
+		
 
 		//Loop
 		$this->add_control(
@@ -956,7 +974,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient' ],
 				'exclude' => [ 'image' ],
-				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i',
+				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i, {{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i',
 				'fields_options' => [
 					'background' => [
 						'default' => 'classic',
@@ -964,8 +982,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 					'color' => [
 						'default' => '#000000',
 					],
-				],
-				//'condition' => $args['section_condition'],
+				]				
 			]
 		);
 
@@ -997,7 +1014,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Background', AEFE_TEXTDOMAIN ),
 				'types' => [ 'classic', 'gradient' ],
 				'exclude' => [ 'image' ],
-				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i, {{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i:focus',
+				'selector' => '{{WRAPPER}} .aefe-some-review-contents-area .owl-nav button:hover i, {{WRAPPER}} .aefe-some-review-contents-area .owl-nav button i:focus, {{WRAPPER}} .aefe-tms-testimonial-content-area .owl-nav button i:hover',
 				'fields_options' => [
 					'background' => [
 						'default' => 'classic',
@@ -1038,6 +1055,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -1050,6 +1068,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'size_units' => [ 'px', 'em' ],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-dots' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -1066,6 +1085,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'margin-right: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'margin-right: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -1079,6 +1099,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'default' => '#666666',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot span' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area button.owl-dot span' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
@@ -1092,11 +1113,56 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'default' => '#000000',
 				'selectors' => [
 					'{{WRAPPER}} .aefe-some-review-contents-area .owl-dots button.owl-dot.active span' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .aefe-tms-testimonial-content-area .owl-dot.active span' => 'background-color: {{VALUE}};',
 				],				
 			]
 		);
 
-		$this->end_controls_section(); // Nav
+		$this->end_controls_section(); // Dot
+
+		// Quote
+		$this->start_controls_section(
+			'aefe_testmonial_slider_quote_icon_bar',
+			[
+				'label' => esc_html__( 'Quote', AEFE_TEXTDOMAIN),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'aefe_testimonial_slider_quote_switch' => '1',
+				],
+			]
+		);
+				
+
+		$this->add_control(
+			'aefe_testi_slider_quote_size',
+			[
+				'label' => esc_html__( 'Size', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'rem' ],	
+				'default' => [
+					'unit' => 'px',
+					'size' => 58,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tms-testimonial-quote i' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		// Quote Color
+		$this->add_control(
+			'aefe_testimonial_slider_quote_color',
+			[
+				'label' => esc_html__( 'Color', AEFE_TEXTDOMAIN ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#4b278f',
+				'selectors' => [
+					'{{WRAPPER}} .aefe-tms-testimonial-quote i' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_section(); // Quote
 
 
 

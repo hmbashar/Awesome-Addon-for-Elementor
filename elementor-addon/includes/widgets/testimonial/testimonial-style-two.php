@@ -34,6 +34,7 @@ $dot_mobile = $settings['aefe_testimonial_slider_dot_switch_mobile'] ? $settings
 
 
 
+
 // check autoplay on/off
   if('yes' === $settings['aefe_testimonial_slider_autoplay']) {
     $autoplay = 1;
@@ -117,7 +118,11 @@ $dot_mobile = $settings['aefe_testimonial_slider_dot_switch_mobile'] ? $settings
         ?>
         <!--Single Testimonial -->
         <div class="aefe-tms-single-testimonial">
-            <div class="aefe-tms-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+
+            <?php if('1' == $settings['aefe_testimonial_slider_quote_switch']) : ?>
+              <div class="aefe-tms-testimonial-quote"><i class="fa fa-quote-left"></i></div>
+            <?php endif; ?>
+
             <div class="aefe-tms-clients-image">
                 <?php if(!empty($testimonial_slider['aefe_testimonial_slider_img']['url'])) : ?>
                     <img src="<?php echo esc_url($testimonial_slider['aefe_testimonial_slider_img']['url']); ?>" alt="">
