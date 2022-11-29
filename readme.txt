@@ -22,15 +22,15 @@ You're welcome to contribute to the plugin on the [Github](https://github.com/hm
 * [Pricing Table Style two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-5.jpg?raw=true)
 * [Team Member Single](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-2.jpg?raw=true)
 * [Team Member Slider](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-3.jpg?raw=true)
-* [Team Member Slider Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/TeamMember-3.jpg?raw=true)
+* [Team Member Slider Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-8.jpg?raw=true)
 * [Team Member Single and slider](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-4.jpg?raw=true)
-* [Accordion One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/accordian-1.jpg?raw=true)
-* [Skills One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-1.jpg?raw=true)
-* [Skills Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/skill-2.jpg?raw=true)
-* [Testimonial One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-1.jpg?raw=true)
-* [Testimonial Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-2.jpg?raw=true)
-* [Testimonial Three](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/testimonial-3.jpg?raw=true)
-* [Icon Box](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/icon-box.jpg?raw=true)
+* [Accordion One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-13.jpg?raw=true)
+* [Skills One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-6.jpg?raw=true)
+* [Skills Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-7.jpg?raw=true)
+* [Testimonial One](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-9.jpg?raw=true)
+* [Testimonial Two](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-10.jpg?raw=true)
+* [Testimonial Three](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-11.jpg?raw=true)
+* [Icon Box](https://github.com/hmbashar/Awesome-Addon-for-Elementor/blob/master/screenshots/screenshot-12.jpg?raw=true)
 
 
 == Frequently Asked Questions ==
@@ -51,13 +51,19 @@ No, don't need, this plugin will work with free version, so don't worry.
 
 == Screenshots ==
 
-1. Pricing Table
-2. Team Member (2 Style)
-3. Accordion
-4. Skill (2 Style)
-5. Testimonial Slider (3 Style)
-6. Icon Box
-7. More Coming soon
+1. Pricing Table One
+2. Team Member One
+3. Team Member
+4. Team Member Two
+5. Pricing Table Two
+6. Skill One
+7. Skill Two
+8. Team Member Three
+9. Testimonial One
+10. Testimonial Two
+11. Testimonial Three
+12. Icon Box
+13. Accordion
 
 == Changelog ==
 
