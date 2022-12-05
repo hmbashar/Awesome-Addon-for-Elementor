@@ -293,7 +293,7 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 			]
 		);
 
-		// Number of items
+		// Item gap
 		$this->add_responsive_control(
 			'aefe_testimonial_item_gap',
 			[
@@ -308,8 +308,14 @@ class AEFE_Testimonial_Slider extends \Elementor\Widget_Base {
 				'mobile_default' => 0
 			]
 		);
-
-		// Number of items
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'aefe_testimonial_img_border_radius',
+				'selector' => '{{WRAPPER}} .your-class',
+			]
+		);
+		// Mouse Drag
 		$this->add_responsive_control(
 			'aefe_testimonial_item_mouseDrag',
 			[
